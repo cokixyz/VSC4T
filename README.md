@@ -15,14 +15,14 @@ An elegant and minimalist theme for Hexo, designed with a dark color scheme and 
 
 ## Installation
 
-1. Navigate to your Hugo site's themes directory:
+1. Navigate to your Hex site's themes directory:
 ```bash
 cd themes
 ```
 
 2. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/blackcat.git
+git clone https://github.com/B143KC47/BlackCat-A-Hexo-Theme.git
 ```
 
 3. Add the theme to your site's configuration:
