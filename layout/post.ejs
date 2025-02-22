@@ -1,0 +1,24 @@
+<%- partial('_partial/header') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <article class="post-content">
+        <h1 class="post-title"><%= page.title %></h1>
+        <div class="post-meta">
+          <span><i class="fas fa-calendar"></i> <%= date(page.date, 'YYYY-MM-DD') %></span>
+          <% if (page.categories && page.categories.length) { %>
+            <span><i class="fas fa-folder"></i> <%- list_categories(page.categories, { show_count: false, style: 'none' }) %></span>
+          <% } %>
+        </div>
+        <div class="post-body">
+          <%- page.content %>
+        </div>
+      </article>
+      <%- partial('_partial/post/recommended') %>
+    </div>
+    <div class="col-md-3">
+      <%- partial('_partial/post/toc') %>
+    </div>
+  </div>
+</div>

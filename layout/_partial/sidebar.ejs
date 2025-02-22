@@ -1,0 +1,22 @@
+<aside class="sidebar">
+  <!-- 关于我 -->
+  <div class="sidebar-section about">
+    <h3><i class="fas fa-user"></i> About</h3>
+    <div class="about-info">
+      <img src="<%- url_for(theme.avatar || '/images/avatar.png') %>" alt="avatar" class="avatar">
+      <p><%- theme.description || config.description %></p>
+    </div>
+  </div>
+
+  <!-- 分类 -->
+  <div class="sidebar-section categories">
+    <h3><i class="fas fa-folder"></i> Categories</h3>
+    <%- list_categories({show_count: true}) %>
+  </div>
+
+  <!-- 标签云 -->
+  <div class="sidebar-section tags">
+    <h3><i class="fas fa-tags"></i> Tags</h3>
+    <%- tagcloud({min_font: 12, max_font: 24, amount: 50, color: true, start_color: '#999', end_color: '#fff'}) %>
+  </div>
+</aside>

@@ -1,0 +1,61 @@
+# Theme configuration file
+
+# 基本信息
+name: BlackCat
+description: A simple and elegant theme for Hexo.
+author: Your Name
+
+# 菜单配置
+menu:
+  Home: /
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
+  About: /about
+
+# 样式配置
+style:
+  # 主题色（代码编辑器深色主题）
+  theme_color: '#1e1e1e'
+  # 链接色
+  link_color: '#569cd6'
+  # 强调色
+  accent_color: '#608b4e'
+  # 字体
+  font_family: 'JetBrains Mono, Consolas, Monaco, monospace'
+  # 背景色
+  background_color: '#252526'
+  # 文本色
+  text_color: '#d4d4d4'
+
+# 侧边栏配置
+sidebar:
+  # 显示侧边栏
+  enabled: true
+  # 侧边栏位置 (left or right)
+  position: left
+
+# 代码高亮主题 (使用 highlight.js 支持的任何主题)
+highlight_theme: github
+
+# 首页文章数量
+index_posts: 10
+
+# 开启 MathJax 数学公式支持
+mathjax: false
+
+# Google Analytics 跟踪 ID
+google_analytics:
+
+# Disqus 评论 shortname
+disqus_shortname:
+
+# 社交链接
+social:
+  github: your_github_username
+  twitter: your_twitter_username
+  email: your_email@example.com
+
+# 自定义 CSS 和 JS
+custom_css:
+custom_js:
