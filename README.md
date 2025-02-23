@@ -12,13 +12,10 @@ Demo: [https://b143kc47.github.io/BlackCat-A-Hexo-Theme/](https://b143kc47.githu
 ## Features
 
 - 🌙 Dark mode optimized
-- 🐱 Cat-themed design elements
 - 📱 Fully responsive layout
 - 🚀 Fast loading performance
 - 🎨 Clean and minimalist design
-- 💬 Built-in comment system support
-- 📊 Google Analytics support
-- 🔍 SEO friendly
+
 
 ## Installation
 
