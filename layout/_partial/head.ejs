@@ -12,15 +12,18 @@
   <!-- 添加代码高亮样式 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="<%- url_for('css/code.css') %>">
-  <link rel="stylesheet" href="<%- url_for('/css/vscode.css') %>">
+  <link rel="stylesheet" href="<%- url_for('css/vscode.css') %>">
   <link rel="stylesheet" href="<%- url_for('css/post.css') %>">
   <link rel="stylesheet" href="<%- url_for('css/tag.css') %>">
   <link rel="stylesheet" href="<%- url_for('css/categories.css') %>">
   <link rel="stylesheet" href="<%- url_for('css/archive.css') %>">
+  <link rel="stylesheet" href="<%- url_for('css/mobile.css') %>">
+  <link rel="stylesheet" href="<%- url_for('css/responsive.css') %>">
 
   <!-- 添加 JetBrains Mono 字体 -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <%- partial('_partial/custom_head') %>
-  <script src="<%- url_for('/js/explorer.js') %>"></script>
+  <script src="<%- url_for('js/explorer.js') %>"></script>
 </head>
+
