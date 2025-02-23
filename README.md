@@ -6,7 +6,8 @@ An elegant and minimalist theme for Hexo, designed with a dark color scheme and 
 
 *Image credit: [Black cat at work by Pixabay](https://pixabay.com/photos/cat-black-cat-work-computer-963931/)*
 
-Demo：
+Demo: [https://b143kc47.github.io/BlackCat-A-Hexo-Theme/](https://b143kc47.github.io/BlackCat-A-Hexo-Theme/)
+
 
 ## Features
 
