@@ -2,7 +2,7 @@
 
 An elegant and minimalist theme for Hexo, designed with a dark color scheme and cat-inspired aesthetics.
 
-![Black cat sitting at computer](https://cdn.pixabay.com/photo/2015/09/29/13/47/cat-963931_1280.jpg)
+![Black cat sitting at computer](cat.jpg)
 
 *Image credit: [Black cat at work by Pixabay](https://pixabay.com/photos/cat-black-cat-work-computer-963931/)*
 
