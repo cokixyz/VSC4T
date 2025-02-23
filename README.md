@@ -8,7 +8,7 @@ An elegant and minimalist theme for Hexo, designed with a dark color scheme and 
 
 Demo:
 
-![Demo Screenshot](VSC4T.jpg)
+![Demo Screenshot](VSC4T.png)
 
 ## Features
 
