@@ -2,8 +2,8 @@
 
 # 基本信息
 name: BlackCat
-description: A simple and elegant theme for Hexo.
-author: Your Name
+description: A simple dark Hexo theme inspired by code.
+author: BlackCat
 
 # 菜单配置
 menu:
@@ -35,8 +35,24 @@ sidebar:
   # 侧边栏位置 (left or right)
   position: left
 
-# 代码高亮主题 (使用 highlight.js 支持的任何主题)
-highlight_theme: github
+# 代码高亮设置
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: '  '
+  wrap: true
+  hljs: false  # 关闭 highlight.js
+
+prismjs:
+  enable: false  # 不使用 Prism.js
+
+# 代码块设置
+code_block:
+  copy_button: true
+  line_number: true
+  max_height: 500
+  custom_font: true
 
 # 首页文章数量
 index_posts: 10
