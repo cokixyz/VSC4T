@@ -11,13 +11,10 @@ Demo：
 ## Features
 
 - 🌙 Dark mode optimized
-- 🐱 Cat-themed design elements
 - 📱 Fully responsive layout
 - 🚀 Fast loading performance
 - 🎨 Clean and minimalist design
-- 💬 Built-in comment system support
-- 📊 Google Analytics support
-- 🔍 SEO friendly
+
 
 ## Installation
 
