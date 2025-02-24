@@ -1,6 +1,6 @@
-# BlackCat Theme for Hexo
+# VSCat Theme for Hexo
 
-An elegant and minimalist theme for Hexo, designed with a dark color scheme and cat-inspired aesthetics.
+An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
 
 ![Black cat sitting at computer](cat.jpg)
 
