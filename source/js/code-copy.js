@@ -43,5 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!pre.querySelector('.copy-button')) {
       pre.appendChild(copyButton);
     }
+
+    // 添加滑动处理
+    let touchStartX = 0;
+    let touchStartY = 0;
+    
+    pre.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    });
+    
+    pre.addEventListener('touchmove', (e) => {
+      const touchEndX = e.touches[0].clientX;
+      const touchEndY = e.touches[0].clientY;
+      
+      // 如果水平滑动大于垂直滑动，阻止页面滚动
+      if (Math.abs(touchEndX - touchStartX) > Math.abs(touchEndY - touchStartY)) {
+        e.preventDefault();
+      }
+    }, { passive: false });
   });
 });
