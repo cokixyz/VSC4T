@@ -75,3 +75,4 @@ social:
 # 自定义 CSS 和 JS
 custom_css:
 custom_js:
+  - /js/code-copy.js
