@@ -116,6 +116,7 @@
 .content-area {
   padding: 20px;
   overflow-y: auto;
+  max-width: 100%;      /* 确保内容区域不会溢出 */
 }
 
 /* 文章卡片样式 */
@@ -292,6 +293,8 @@ pre {
   background: var(--vscode-bg);
   border-radius: 4px;
   overflow: visible;  /* 修改overflow以显示tooltip */
+  width: 100%;         /* 确保 pre 标签占满容器宽度 */
+  box-sizing: border-box;
 }
 
 .copy-button {
@@ -370,11 +373,26 @@ pre, pre code, .copy-button {
   box-shadow: none !important;
 }
 
-/* 高亮代码块样式 */
+/* 代码块容器样式 */
 .hljs {
+  width: 100%;         /* 修改宽度为100% */
+  max-width: 100%;     /* 确保不会溢出 */
   tab-size: 4;
   -moz-tab-size: 4;
   white-space: pre-wrap;
-  word-break: break-all;
+  word-break: keep-all;  /* 改为 keep-all 避免破坏代码格式 */
   word-wrap: break-word;
+  overflow-x: auto;      /* 添加横向滚动 */
+  padding: 0.5em;        /* 添加内边距 */
+}
+
+/* 优化移动端显示 */
+@media (max-width: 768px) {
+  pre {
+    padding: 2.5em 0.5em 1em;  /* 减少移动端的内边距 */
+  }
+  
+  .hljs {
+    padding: 0.3em;    /* 减少移动端的内边距 */
+  }
 }
