@@ -1,0 +1,74 @@
+/* 桌面端目录样式 */
+.desktop-toc-wrapper {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  z-index: 1000;
+}
+
+/* 目录触发按钮样式 */
+.desktop-toc-trigger {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-active);
+  color: var(--vscode-foreground);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+/* 目录面板样式 */
+.desktop-toc {
+  position: fixed;
+  right: -320px; /* 初始位置在屏幕外 */
+  top: 100px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-active);
+  border-radius: 8px;
+  padding: 16px;
+  transition: right 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* 目录显示状态 */
+.desktop-toc.visible {
+  right: 20px;
+}
+
+/* 目录触发按钮位置调整 */
+.desktop-toc.visible + .desktop-toc-trigger {
+  right: 340px;
+}
+
+/* 响应式处理 */
+@media (min-width: 769px) {
+  .desktop-toc-wrapper {
+    display: block;  /* 大屏幕显示 */
+  }
+  .mobile-toc-trigger,
+  .mobile-toc {
+    display: none;  /* 隐藏移动端目录 */
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-toc-wrapper {
+    display: none;
+  }
+}
+
+/* 保持原有的移动端样式 */
+/* ...existing mobile styles... */

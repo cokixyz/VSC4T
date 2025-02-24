@@ -1,0 +1,20 @@
+<%- partial('_partial/header') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1><%= __('categories') %>: <%= page.category %></h1>
+      <ul>
+        <% page.posts.each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+            <span><%= post.date.format('YYYY-MM-DD') %></span>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <%- partial('_partial/sidebar') %>
+    </div>
+  </div>
+</div>
