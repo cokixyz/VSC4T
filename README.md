@@ -27,12 +27,12 @@ cd themes
 
 2. Clone this repository:
 ```bash
-git clone https://github.com/B143KC47/BlackCat-A-Hexo-Theme.git
+git clone https://github.com/B143KC47/VSC4T-A-Hexo-Theme.git
 ```
 
 3. Add the theme to your site's configuration:
 ```toml
-theme = "blackcat"
+theme = VSC4T
 ```
 
 ## Configuration
