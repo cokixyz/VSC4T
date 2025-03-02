@@ -145,6 +145,15 @@ When multiple languages are configured, the first one will be used as the defaul
 
 ## Blog Post Settings
 
+### Creating a New Post
+
+1. Create a new post using Hexo command:
+```bash
+hexo new post "Your Post Title"
+```
+
+2. This will create a new markdown file in `source/_posts/your-post-title.md`
+
 
 Example post:
 
