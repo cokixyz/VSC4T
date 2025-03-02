@@ -56,19 +56,40 @@ relative_link: true
 ```bash
 hexo new page categories
 ```
-然后编辑 `source/categories/index.md` 并添加 `type: "categories"`
+然后编辑 `source/categories/index.md` 并添加
+```
+---
+title: categories
+layout: categories
+---
+```
 
 2. 创建标签页面：
 ```bash
 hexo new page tags
 ```
-然后编辑 `source/tags/index.md` 并添加 `type: "tags"`
+然后编辑 `source/tags/index.md` 并添加
+```
+---
+title: tags
+layout: tags
+---
+```
 
 3. 创建关于页面：
 ```bash
 hexo new page about
 ```
 并在 `source/about/index.md` 中添加个人信息
+```
+---
+title: about
+date: 2025-02-22 22:14:44
+---
+
+一个非常优秀的简约主题
+
+```
 
 ## 主题配置
 
@@ -118,6 +139,31 @@ language: zh-CN  # 默认语言
 - 阿拉伯语 (ar)
 - 越南语 (vi)
 
+### 语言配置示例
+
+要使用其他语言，请在站点的 `_config.yml` 中设置 `language` 参数：
+
+```yaml
+# 对于日语
+language: ja
+
+# 对于韩语
+language: ko
+
+# 对于法语
+language: fr
+```
+
+您也可以配置多种语言：
+
+```yaml
+language: 
+  - zh-CN
+  - en
+```
+
+当配置多种语言时，第一个将作为默认语言。
+
 ### 文章设置
 
 ### 创建新文章
@@ -129,6 +175,25 @@ hexo new post "文章标题"
 
 2. 这将在 `source/_posts/文章标题.md` 创建一个新的 markdown 文件
 
+3. 配置文章的 front-matter：
+```yaml
+---
+title: 文章标题
+date: YYYY-MM-DD HH:MM:SS
+updated: YYYY-MM-DD HH:MM:SS    # 可选，更新时间
+tags: 
+  - 标签1
+  - 标签2
+categories: 
+  - 分类1
+  - 分类2/子分类    # 支持多级分类
+thumbnail: /images/thumbnail.jpg    # 可选，文章缩略图
+toc: true    # 显示目录
+comments: true    # 启用评论
+description: 文章描述    # 用于SEO和预览
+sticky: 100    # 可选，文章置顶权重
+---
+```
 
 示例文章：
 
