@@ -95,6 +95,24 @@ social:
   email: your_email@example.com
 ```
 
+## Blog Post Settings
+
+
+Example post:
+
+```
+---
+title: VSC4T - A Dark and Elegant Hexo Theme
+date: 2023-06-15 10:30:00
+tags: [hexo, theme, dark-mode, responsive]
+categories: [web-design, themes]
+toc: true
+description: Introducing VSC4T, a code editor inspired dark theme for Hexo blogs.
+---
+
+Your post content goes here...
+```
+
 ## Custom Styling
 
 This theme supports custom CSS and JS. In the theme configuration:
