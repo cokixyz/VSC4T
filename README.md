@@ -56,20 +56,38 @@ This theme requires the following pages. Make sure to create them:
 ```bash
 hexo new page categories
 ```
-Then edit `source/categories/index.md` and add `type: "categories"`
-
+Then edit `source/categories/index.md` and add 
+```
+---
+title: categories
+layout: categories
+---
+```
 2. Create Tags page:
 ```bash
 hexo new page tags
 ```
 Then edit `source/tags/index.md` and add `type: "tags"`
-
+```
+---
+title: tags
+layout: tags
+---
+```
 3. Create About page:
 ```bash
 hexo new page about
 ```
 And add your personal information to `source/about/index.md`
+```
+---
+title: about
+date: 2025-02-22 22:14:44
+---
 
+A very good simple theme
+
+```
 ## Theme Configuration
 
 Modify the `_config.yml` in the theme directory:
