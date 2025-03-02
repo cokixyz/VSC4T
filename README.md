@@ -95,6 +95,54 @@ social:
   email: your_email@example.com
 ```
 
+## Language Configuration
+
+VSC4T theme supports multiple languages. To change the language, modify your site's `_config.yml`:
+
+```yaml
+language: en  # default language
+```
+
+### Supported Languages
+
+- English (en)
+- Simplified Chinese (zh-CN)
+- Japanese (ja)
+- Korean (ko)
+- French (fr)
+- German (de)
+- Spanish (es)
+- Italian (it)
+- Russian (ru)
+- Portuguese (pt)
+- Arabic (ar)
+- Vietnamese (vi)
+
+### Language Configuration Example
+
+To use a different language, set the `language` parameter in your site's `_config.yml`:
+
+```yaml
+# For Japanese
+language: ja
+
+# For Korean
+language: ko
+
+# For French
+language: fr
+```
+
+You can also configure multiple languages:
+
+```yaml
+language: 
+  - en
+  - zh-CN
+```
+
+When multiple languages are configured, the first one will be used as the default language.
+
 ## Blog Post Settings
 
 
