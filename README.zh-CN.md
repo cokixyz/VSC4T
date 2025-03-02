@@ -175,25 +175,7 @@ hexo new post "文章标题"
 
 2. 这将在 `source/_posts/文章标题.md` 创建一个新的 markdown 文件
 
-3. 配置文章的 front-matter：
-```yaml
----
-title: 文章标题
-date: YYYY-MM-DD HH:MM:SS
-updated: YYYY-MM-DD HH:MM:SS    # 可选，更新时间
-tags: 
-  - 标签1
-  - 标签2
-categories: 
-  - 分类1
-  - 分类2/子分类    # 支持多级分类
-thumbnail: /images/thumbnail.jpg    # 可选，文章缩略图
-toc: true    # 显示目录
-comments: true    # 启用评论
-description: 文章描述    # 用于SEO和预览
-sticky: 100    # 可选，文章置顶权重
----
-```
+
 
 示例文章：
 
