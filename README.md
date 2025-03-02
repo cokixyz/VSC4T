@@ -28,7 +28,7 @@ cd themes
 
 2. Clone this repository:
 ```bash
-git clone https://github.com/B143KC47/VSC4T-A-Hexo-Theme.git VSC4T
+git clone https://github.com/B143KC47/VSC4T-A-Hexo-Theme.git
 ```
 
 3. Set the theme in your site's configuration:
