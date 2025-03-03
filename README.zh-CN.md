@@ -28,7 +28,7 @@ cd themes
 
 2. 克隆此仓库：
 ```bash
-git clone https://github.com/B143KC47/VSC4T-A-Hexo-Theme.git VSC4T
+git clone https://github.com/B143KC47/VSC4T.git 
 ```
 
 3. 在站点配置中设置主题：
