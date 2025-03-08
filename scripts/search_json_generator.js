@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const stripHTML = require('hexo/lib/plugins/filter/before_post_render/backtick_code_block');
+// Removed the dependency on hexo's internal module
 const stripIndent = require('strip-indent');
 
 // Generate search data json file
@@ -30,7 +30,7 @@ hexo.extend.generator.register('searchJson', locals => {
     temp.title = post.title || '';
     temp.url = root + post.path;
     temp.content = removeCodeBlocks(post.content || '');
-    temp.content = stripHTML(temp.content); // Strip HTML tags
+    temp.content = stripHTML(temp.content); // Strip HTML tags with our custom function
     temp.content = temp.content.trim().replace(/\n/g, ' '); // Remove newlines
     temp.content = temp.content.replace(/\s+/g, ' '); // Normalize spaces
     temp.date = post.date ? post.date.format('YYYY-MM-DD') : '';
@@ -58,6 +58,24 @@ hexo.extend.generator.register('searchJson', locals => {
 
 // Remove code blocks to reduce search data size and improve search quality
 function removeCodeBlocks(str) {
+  if (!str) return '';
   return str.replace(/```[\s\S]*?```/g, '')
             .replace(/`{1,2}[^`].*?`{1,2}/g, '');
+}
+
+// Simple HTML tag stripping function to replace the hexo dependency
+function stripHTML(str) {
+  if (!str) return '';
+  return str
+    .replace(/<pre.*?<\/pre>/gs, '') // Remove pre tags and their content
+    .replace(/<[^>]*>/g, '') // Remove HTML tags
+    .replace(/&nbsp;/g, ' ') // Replace &nbsp; with space
+    .replace(/&lt;/g, '<') // Replace &lt; with <
+    .replace(/&gt;/g, '>') // Replace &gt; with >
+    .replace(/&amp;/g, '&') // Replace &amp; with &
+    .replace(/&quot;/g, '"') // Replace &quot; with "
+    .replace(/&#39;/g, "'") // Replace &#39; with '
+    .replace(/&ldquo;/g, '"') // Replace &ldquo; with "
+    .replace(/&rdquo;/g, '"') // Replace &rdquo; with "
+    .replace(/&hellip;/g, '...'); // Replace &hellip; with ...
 }
