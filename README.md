@@ -18,6 +18,7 @@ Demo:
 - 📱 Fully responsive layout
 - 🚀 Fast loading performance
 - 🎨 Clean and minimalist design
+- 🔍 VS Code style search functionality
 
 ## Installation
 
@@ -88,6 +89,18 @@ date: 2025-02-22 22:14:44
 A very good simple theme
 
 ```
+4. Create Search page:
+```bash
+hexo new page search
+```
+Then edit `source/search/index.md` and add:
+```
+---
+title: search
+layout: search
+---
+```
+
 ## Theme Configuration
 
 Modify the `_config.yml` in the theme directory:
@@ -221,6 +234,44 @@ highlight:
   line_number: true
   auto_detect: true
 ```
+
+## Search Configuration
+
+The theme includes a powerful search functionality inspired by VS Code's search interface. The search feature allows users to:
+
+- Search through all blog posts and pages
+- Filter by title, content, tags, and categories
+- Use keyboard navigation (↑↓ arrows and Enter)
+- See highlighted search matches
+- Get context-aware search previews
+
+### Enabling Search
+
+Search is enabled by default. The search index is automatically generated when you build your site. You can customize the search behavior in your site's `_config.yml`:
+
+```yaml
+search:
+  path: search.json        # Path to generate the search index file
+  field: post             # Search field, available: post, page, all
+  content: true           # Whether to include post/page content
+  format: html            # Content format to parse, available: html, raw
+```
+
+### Search Keyboard Shortcuts
+
+- `↑` / `↓`: Navigate through search results
+- `Enter`: Open selected result
+- `Esc`: Clear search input
+
+### Search Filters
+
+The search interface includes filters for:
+- Titles
+- Content
+- Tags
+- Categories
+
+Users can toggle these filters to narrow down their search results.
 
 ## License
 

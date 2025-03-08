@@ -24,6 +24,10 @@
         <i class="fas fa-tags"></i>
         <span>Tags</span>
       </a>
+      <a href="<%- url_for('/search/') %>" class="nav-item <%= is_current('search') ? 'active' : '' %>">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </a>
       <a href="<%- url_for('/about') %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
         <i class="fas fa-info-circle"></i>
         <span>About</span>

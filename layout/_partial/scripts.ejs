@@ -18,3 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <script src="<%- url_for('js/toc.js') %>"></script>
+
+<!-- Scripts -->
+<script>
+  // 将语言文件中的翻译传递给前端
+  window.HEXO_CONFIG = {
+    search_placeholder: "<%- __('search_placeholder') %>",
+    search_no_results: "<%- __('search_no_results') %>",
+    search_result: "<%- __('search_result') %>",
+    search_results: "<%- __('search_results') %>",
+    search_results_found: "<%- __('search_results_found') %>",
+    search_error: "<%- __('search_error') %>",
+    search_clear: "<%- __('search_clear') %>"
+  };
+</script>
+
+<% if (theme.scripts && theme.scripts.length){ %>
+  <% theme.scripts.forEach(function(url) { %>
+    <script src="<%- url_for(url) %>"></script>
+  <% }) %>
+<% } %>
+
+<!-- 添加所有需要的脚本 -->
+<script src="<%- url_for('js/main.js') %>"></script>
