@@ -1,34 +1,34 @@
 <header class="vs-header">
   <nav class="vs-nav">
     <div class="nav-left">
-      <a href="<%- url_for('/') %>" class="nav-brand">
+      <a href="<%- config.root %>" class="nav-brand">
         <i class="fas fa-terminal"></i>
         <%= config.title %>
       </a>
     </div>
     
     <div class="nav-right">
-      <a href="<%- url_for('/') %>" class="nav-item <%= is_home() ? 'active' : '' %>">
+      <a href="<%- config.root %>" class="nav-item <%= is_home() ? 'active' : '' %>">
         <i class="fas fa-home"></i>
         <span><%- __('home') %></span>
       </a>
-      <a href="<%- url_for('/archives') %>" class="nav-item <%= is_archive() ? 'active' : '' %>">
+      <a href="<%- config.root + 'archives/' %>" class="nav-item <%= is_archive() ? 'active' : '' %>">
         <i class="fas fa-archive"></i>
         <span><%- __('archives') %></span>
       </a>
-      <a href="<%- url_for('/categories/') %>" class="nav-item <%= is_category() ? 'active' : '' %>">
+      <a href="<%- config.root + 'categories/' %>" class="nav-item <%= is_category() ? 'active' : '' %>">
         <i class="fas fa-folder"></i>
         <span><%- __('categories') %></span>
       </a>
-      <a href="<%- url_for('/tags/') %>" class="nav-item <%= is_tag() ? 'active' : '' %>">
+      <a href="<%- config.root + 'tags/' %>" class="nav-item <%= is_tag() ? 'active' : '' %>">
         <i class="fas fa-tags"></i>
         <span><%- __('tags') %></span>
       </a>
-      <a href="<%- url_for('/search/') %>" class="nav-item <%= is_current('search') ? 'active' : '' %>">
+      <a href="<%- config.root + 'search/' %>" class="nav-item <%= is_current('search') ? 'active' : '' %>">
         <i class="fas fa-search"></i>
         <span><%- __('search') %></span>
       </a>
-      <a href="<%- url_for('/about') %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
+      <a href="<%- config.root + 'about/' %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
         <i class="fas fa-info-circle"></i>
         <span><%- __('about') %></span>
       </a>

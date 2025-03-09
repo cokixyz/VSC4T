@@ -111,6 +111,10 @@ name: BlackCat
 description: A simple dark Hexo theme inspired by code.
 author: YourName
 
+# Basic Website Configuration
+url: https://b143kc47.github.io/VSC4T 
+root: /VSC4T/ 
+
 # Menu Configuration
 menu:
   Home: /

@@ -8,11 +8,11 @@ author: BlackCat
 # 菜单配置
 menu:
   首页: /
-  归档: /archives
-  分类: /categories
-  标签: /tags
-  关于: /about
-  搜索: /search
+  归档: /archives/
+  分类: /categories/
+  标签: /tags/
+  关于: /about/
+  搜索: /search/
 
 # 样式配置
 style:
