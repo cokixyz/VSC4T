@@ -91,6 +91,20 @@ date: 2025-02-22 22:14:44
 
 ```
 
+```
+4. 创建搜索页面：
+```bash
+hexo new page search
+```
+然后编辑 `source/search/index.md` 并添加：
+```
+---
+title: search
+layout: search
+---
+```
+```
+
 ## 主题配置
 
 修改主题目录下的 `_config.yml`：
