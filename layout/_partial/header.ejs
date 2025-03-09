@@ -10,27 +10,27 @@
     <div class="nav-right">
       <a href="<%- url_for('/') %>" class="nav-item <%= is_home() ? 'active' : '' %>">
         <i class="fas fa-home"></i>
-        <span>Home</span>
+        <span><%- __('home') %></span>
       </a>
       <a href="<%- url_for('/archives') %>" class="nav-item <%= is_archive() ? 'active' : '' %>">
         <i class="fas fa-archive"></i>
-        <span>Archives</span>
+        <span><%- __('archives') %></span>
       </a>
       <a href="<%- url_for('/categories/') %>" class="nav-item <%= is_category() ? 'active' : '' %>">
         <i class="fas fa-folder"></i>
-        <span>Categories</span>
+        <span><%- __('categories') %></span>
       </a>
       <a href="<%- url_for('/tags/') %>" class="nav-item <%= is_tag() ? 'active' : '' %>">
         <i class="fas fa-tags"></i>
-        <span>Tags</span>
+        <span><%- __('tags') %></span>
       </a>
       <a href="<%- url_for('/search/') %>" class="nav-item <%= is_current('search') ? 'active' : '' %>">
         <i class="fas fa-search"></i>
-        <span>Search</span>
+        <span><%- __('search') %></span>
       </a>
       <a href="<%- url_for('/about') %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
         <i class="fas fa-info-circle"></i>
-        <span>About</span>
+        <span><%- __('about') %></span>
       </a>
     </div>
   </nav>

@@ -23,13 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
   // 将语言文件中的翻译传递给前端
   window.HEXO_CONFIG = {
+    language: "<%= config.language || 'en' %>",
     search_placeholder: "<%- __('search_placeholder') %>",
     search_no_results: "<%- __('search_no_results') %>",
     search_result: "<%- __('search_result') %>",
     search_results: "<%- __('search_results') %>",
     search_results_found: "<%- __('search_results_found') %>",
-    search_error: "<%- __('search_error') %>",
-    search_clear: "<%- __('search_clear') %>"
+    search_in: "<%- __('search_in') %>",
+    search_in_title: "<%- __('search_in_title') %>",
+    search_in_content: "<%- __('search_in_content') %>",
+    search_in_tags: "<%- __('search_in_tags') %>",
+    search_in_categories: "<%- __('search_in_categories') %>",
+    search_filters: "<%- __('search_filters') %>",
+    search_recent: "<%- __('search_recent') %>",
+    search_clear: "<%- __('search_clear') %>",
+    search_loading: "<%- __('search_loading') %>",
+    search_error: "<%- __('search_error') %>"
   };
 </script>
 
@@ -41,3 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- 添加所有需要的脚本 -->
 <script src="<%- url_for('js/main.js') %>"></script>
+<script src="<%- url_for('js/search.js') %>"></script>
