@@ -77,11 +77,35 @@
           </div>
         </div>
         
-        <div id="vs-search-results" class="vs-search-results"></div>
+        <div id="vs-search-results" class="vs-search-results">
+          <div class="vs-search-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span><%= __('search_loading') || 'Loading search data...' %></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  // 确保搜索配置在 search.js 加载前可用
+  window.HEXO_CONFIG = {
+    language: "<%= config.language || 'en' %>",
+    root: "<%= config.root || '/' %>",
+    search_placeholder: "<%- __('search_placeholder') %>",
+    search_no_results: "<%- __('search_no_results') %>",
+    search_results: "<%- __('search_results') %>",
+    search_result: "<%- __('search_result') %>",
+    search_loading: "<%- __('search_loading') %>",
+    search_error: "<%- __('search_error') %>"
+  };
+
+  // 特定于搜索的配置
+  window.VSC4T_SEARCH = {
+    root: "<%= config.root || '/' %>"
+  };
+</script>
 
 <script src="<%- url_for('js/search.js') %>"></script>
 
@@ -102,5 +126,8 @@
         }
       });
     }
+    
+    // 检查搜索数据可用性
+    console.log('[VSC4T] 搜索初始化完成，搜索路径：', window.VSC4T_SEARCH.root + 'search.json');
   });
 </script>

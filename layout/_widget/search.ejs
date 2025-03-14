@@ -34,7 +34,12 @@
           </div>
         </div>
         
-        <div id="vs-search-results" class="vs-search-results"></div>
+        <div id="vs-search-results" class="vs-search-results">
+          <div class="vs-search-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>Loading search data...</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -47,11 +52,27 @@
     const searchClearBtn = document.getElementById('vs-search-clear');
     
     if (searchInput && searchResults) {
-      // Get the correct root path for search.json
-      const rootPath = window.HEXO_CONFIG && window.HEXO_CONFIG.root ? window.HEXO_CONFIG.root : '/';
-      const searchJsonPath = `${rootPath.replace(/\/$/, '')}/search.json`;
+      // 确保获得正确的根路径
+      let rootPath = '/';
+      if (window.HEXO_CONFIG && window.HEXO_CONFIG.root) {
+        rootPath = window.HEXO_CONFIG.root;
+      }
       
-      // Load search data from json
+      // 确保根路径以斜杠结尾
+      if (!rootPath.endsWith('/')) {
+        rootPath += '/';
+      }
+      
+      const searchJsonPath = `${rootPath}search.json`;
+      console.log('[VSC4T] Loading search data from:', searchJsonPath);
+      
+      // 显示加载状态
+      searchResults.innerHTML = `<div class="vs-search-loading">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span>Loading search data...</span>
+      </div>`;
+      
+      // 加载搜索数据
       fetch(searchJsonPath)
         .then(response => {
           if (!response.ok) {
@@ -60,17 +81,28 @@
           return response.json();
         })
         .then(data => {
-          // Initialize search functionality
+          console.log('[VSC4T] Search data loaded successfully:', data.length, 'entries');
+          // 初始化搜索功能
           initSearch(data);
+          // 清除加载状态
+          searchResults.innerHTML = '';
         })
         .catch(error => {
-          console.error('Error loading search data:', error);
-          searchResults.innerHTML = '<div class="vs-no-results"><i class="fas fa-exclamation-circle"></i><span>Error loading search data</span></div>';
+          console.error('Error loading search data:', error, 'Path:', searchJsonPath);
+          searchResults.innerHTML = `<div class="vs-no-results">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error loading search data</span>
+            <div class="vs-error-details">
+              Check that search.json is being generated correctly.<br>
+              Path: ${searchJsonPath}<br>
+              Error: ${error.message}
+            </div>
+          </div>`;
         });
     }
     
     function initSearch(searchData) {
-      // Clear search button
+      // 清除搜索按钮
       if (searchClearBtn) {
         searchClearBtn.addEventListener('click', function() {
           searchInput.value = '';
@@ -79,7 +111,7 @@
         });
       }
       
-      // Search input event
+      // 搜索输入事件
       searchInput.addEventListener('input', function() {
         const query = this.value.trim().toLowerCase();
         
@@ -89,8 +121,8 @@
         }
         
         const results = searchData.filter(item => 
-          item.title.toLowerCase().includes(query) || 
-          item.content.toLowerCase().includes(query) ||
+          (item.title && item.title.toLowerCase().includes(query)) || 
+          (item.content && item.content.toLowerCase().includes(query)) ||
           (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query))) ||
           (item.categories && item.categories.some(cat => cat.toLowerCase().includes(query)))
         );
@@ -98,7 +130,7 @@
         renderResults(results, query);
       });
       
-      // Enable keyboard navigation
+      // 启用键盘导航
       searchInput.addEventListener('keydown', function(e) {
         navigateResults(e);
       });
@@ -125,9 +157,9 @@
         resultItem.className = 'vs-result-item';
         resultItem.dataset.index = index;
         
-        // Highlight matched text
-        let titleHtml = highlightText(item.title, query);
-        let contentPreview = getContentPreview(item.content, query, 150);
+        // 高亮匹配的文本
+        let titleHtml = highlightText(item.title || '', query);
+        let contentPreview = getContentPreview(item.content || '', query, 150);
         let contentHtml = highlightText(contentPreview, query);
         
         resultItem.innerHTML = `
@@ -140,7 +172,7 @@
             <div class="vs-result-meta">
               <span class="vs-result-date">
                 <i class="fas fa-calendar-alt"></i> 
-                ${item.date}
+                ${item.date || ''}
               </span>
               ${item.tags && item.tags.length ? 
                 `<span class="vs-result-tags">
@@ -154,7 +186,7 @@
         searchResults.appendChild(resultItem);
       });
       
-      // Add active state to first result
+      // 为第一个结果添加活动状态
       if (searchResults.children.length > 0) {
         searchResults.children[0].classList.add('active');
       }
@@ -224,7 +256,7 @@
       let start = Math.max(0, index - Math.floor((maxLength - query.length) / 2));
       let end = Math.min(content.length, start + maxLength);
       
-      // Adjust start if we have more room at the end
+      // 如果末尾有更多空间，调整开始位置
       if (end < content.length) {
         start = Math.max(0, end - maxLength);
       }
@@ -247,22 +279,23 @@
       let index = lowerText.indexOf(lowerQuery);
       
       while (index !== -1) {
-        // Add text before match
+        // 添加匹配前的文本
         result += escapeHTML(text.slice(lastIndex, index));
-        // Add highlighted match
+        // 添加高亮匹配
         result += `<span class="vs-highlight">${escapeHTML(text.slice(index, index + query.length))}</span>`;
         
         lastIndex = index + query.length;
         index = lowerText.indexOf(lowerQuery, lastIndex);
       }
       
-      // Add remaining text
+      // 添加剩余文本
       result += escapeHTML(text.slice(lastIndex));
       
       return result;
     }
     
     function escapeHTML(text) {
+      if (typeof text !== 'string') return '';
       return text
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
