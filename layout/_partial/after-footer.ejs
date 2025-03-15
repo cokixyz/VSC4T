@@ -1,6 +1,7 @@
 <!-- 代码高亮 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 <script src="<%- url_for('js/code-copy.js') %>"></script>
+<script src="<%- url_for('js/toc-highlight.js') %>"></script>
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelectorAll('pre code').forEach((block) => {
@@ -29,9 +30,10 @@
 
   // 监听所有链接点击事件
   document.addEventListener('click', function(event) {
-    if (event.target.tagName === 'A' && event.target.getAttribute('href')) {
-      const href = event.target.getAttribute('href');
-      if (href.startsWith('#') || !href.startsWith('http')) {
+    const target = event.target;
+    if (target.tagName === 'A') {
+      const href = target.getAttribute('href');
+      if (href && href.startsWith('#')) {
         smoothScroll(event, href);
       }
     }
