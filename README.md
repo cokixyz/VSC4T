@@ -116,18 +116,27 @@ url: https://b143kc47.github.io/VSC4T
 root: /VSC4T/ 
 
 # Menu Configuration
-menu:
-  Home: /
-  Archives: /archives
-  Categories: /categories
-  Tags: /tags
-  About: /about
+url: https://B143KC47.github.io/xxxxx # actual url
+root: /xxxxxx/  # If your website is deployed in a subdirectory, you need to configure the root property
 
-# Social Links
-social:
-  github: your_github_username
-  twitter: your_twitter_username
-  email: your_email@example.com
+
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+
 ```
 
 ## Language Configuration

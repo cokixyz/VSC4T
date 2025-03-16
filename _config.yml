@@ -72,10 +72,10 @@ highlight:
   auto_detect: true
   tab_replace: '  '
   wrap: true
-  hljs: false  # 关闭 highlight.js
+  hljs: true  # 关闭 highlight.js
 
 prismjs:
-  enable: false  # 不使用 Prism.js
+  enable: true 
 
 # 代码块设置
 code_block:
@@ -88,7 +88,7 @@ code_block:
 index_posts: 10
 
 # 开启 MathJax 数学公式支持
-mathjax: false
+mathjax: true
 
 # 社交链接
 social:
