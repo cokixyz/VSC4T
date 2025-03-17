@@ -1,42 +1,44 @@
-# VSCat Hexo 主题
+# 🐱 VSCat Hexo 主题
 
-一个优雅简约的 Hexo 主题，采用深色配色方案和代码风格设计美学。
+> 一个优雅简约的 Hexo 主题，采用深色配色方案和代码风格设计美学。
 
-[English Documentation](README.md)
+[![English Documentation](https://img.shields.io/badge/docs-English-blue)](README.md)
 
-![黑猫坐在电脑前](cat.jpg)
+<div align="center">
+  <img src="cat.jpg" alt="黑猫坐在电脑前" width="600">
+  <p><em>图片来源：<a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Pixabay 的工作中的黑猫</a></em></p>
+</div>
 
-*图片来源：[Pixabay 的工作中的黑猫](https://pixabay.com/photos/cat-black-cat-work-computer-963931/)*
+<div align="center">
+  <img src="VSC4T.png" alt="演示截图" width="800">
+  <h3>🌟 主题演示</h3>
+</div>
 
-演示：
+## ✨ 特点
 
-![演示截图](VSC4T.png)
+- 🌙 **深色模式优化** - 为舒适阅读精心设计
+- 📱 **完全响应式布局** - 完美适配各种设备
+- 🚀 **快速加载性能** - 优化的性能表现
+- 🎨 **简洁极简设计** - 优雅的界面设计
 
-## 特点
-
-- 🌙 深色模式优化
-- 📱 完全响应式布局
-- 🚀 快速加载性能
-- 🎨 简洁极简设计
-
-## 安装
+## 🚀 安装
 
 1. 进入 Hexo 站点的主题目录：
-```bash
-cd themes
-```
+   ```bash
+   cd themes
+   ```
 
 2. 克隆此仓库：
-```bash
-git clone https://github.com/B143KC47/VSC4T.git 
-```
+   ```bash
+   git clone https://github.com/B143KC47/VSC4T.git
+   ```
 
 3. 在站点配置中设置主题：
-```yaml
-theme: VSC4T
-```
+   ```yaml
+   theme: VSC4T
+   ```
 
-## 必要配置
+## 📝 必要配置
 
 ### 启用相对链接
 
@@ -50,62 +52,61 @@ relative_link: true
 
 ### 创建必需页面
 
-本主题需要以下页面，请确保创建：
+<details>
+<summary>点击展开必需页面配置详情</summary>
 
 1. 创建分类页面：
-```bash
-hexo new page categories
-```
-然后编辑 `source/categories/index.md` 并添加
-```
----
-title: categories
-layout: categories
----
-```
+   ```bash
+   hexo new page categories
+   ```
+   然后编辑 `source/categories/index.md` 并添加
+   ```
+   ---
+   title: categories
+   layout: categories
+   ---
+   ```
 
 2. 创建标签页面：
-```bash
-hexo new page tags
-```
-然后编辑 `source/tags/index.md` 并添加
-```
----
-title: tags
-layout: tags
----
-```
+   ```bash
+   hexo new page tags
+   ```
+   然后编辑 `source/tags/index.md` 并添加
+   ```
+   ---
+   title: tags
+   layout: tags
+   ---
+   ```
 
 3. 创建关于页面：
-```bash
-hexo new page about
-```
-并在 `source/about/index.md` 中添加个人信息
-```
----
-title: about
-date: 2025-02-22 22:14:44
----
+   ```bash
+   hexo new page about
+   ```
+   并在 `source/about/index.md` 中添加个人信息
+   ```
+   ---
+   title: about
+   date: 2025-02-22 22:14:44
+   ---
 
-一个非常优秀的简约主题
+   一个非常优秀的简约主题
+   ```
 
-```
-
-```
 4. 创建搜索页面：
-```bash
-hexo new page search
-```
-然后编辑 `source/search/index.md` 并添加：
-```
----
-title: search
-layout: search
----
-```
-```
+   ```bash
+   hexo new page search
+   ```
+   然后编辑 `source/search/index.md` 并添加：
+   ```
+   ---
+   title: search
+   layout: search
+   ---
+   ```
+</details>
 
-## 主题配置
+## ⚙️ 主题配置
 
 修改主题目录下的 `_config.yml`：
 
@@ -115,85 +116,69 @@ name: BlackCat
 description: A simple dark Hexo theme inspired by code.
 author: YourName
 
-# 菜单配置
-menu:
-  首页: /
-  归档: /archives
-  分类: /categories
-  标签: /tags
-  关于: /about
+# 界面设置
+url: https://B143KC47.github.io/xxxxx # 修改为你实际的网站 URL
+root: /xxxxxx/  # 如果你的网站部署在子目录中，需要设置 root 属性  若没有则为/
 
-# 社交链接
-social:
-  github: your_github_username
-  twitter: your_twitter_username
-  email: your_email@example.com
+# 代码高亮配置
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
 ```
 
-## 语言配置
+## 🌍 语言配置
 
-VSC4T 主题支持多语言。要更改语言，请修改站点的 `_config.yml`：
+<details>
+<summary>点击展开支持的语言</summary>
 
-```yaml
-language: zh-CN  # 默认语言
-```
+- 🇨🇳 简体中文 (zh-CN)
+- 🇺🇸 英语 (en)
+- 🇯🇵 日语 (ja)
+- 🇰🇷 韩语 (ko)
+- 🇫🇷 法语 (fr)
+- 🇩🇪 德语 (de)
+- 🇪🇸 西班牙语 (es)
+- 🇮🇹 意大利语 (it)
+- 🇷🇺 俄语 (ru)
+- 🇵🇹 葡萄牙语 (pt)
+- 🇦🇪 阿拉伯语 (ar)
+- 🇻🇳 越南语 (vi)
 
-### 支持的语言
+</details>
 
-- 英语 (en)
-- 简体中文 (zh-CN)
-- 日语 (ja)
-- 韩语 (ko)
-- 法语 (fr)
-- 德语 (de)
-- 西班牙语 (es)
-- 意大利语 (it)
-- 俄语 (ru)
-- 葡萄牙语 (pt)
-- 阿拉伯语 (ar)
-- 越南语 (vi)
+### 语言设置示例
 
-### 语言配置示例
-
-要使用其他语言，请在站点的 `_config.yml` 中设置 `language` 参数：
+在站点的 `_config.yml` 中设置 `language` 参数：
 
 ```yaml
-# 对于日语
-language: ja
+# 单语言设置
+language: zh-CN
 
-# 对于韩语
-language: ko
-
-# 对于法语
-language: fr
-```
-
-您也可以配置多种语言：
-
-```yaml
+# 多语言设置
 language: 
   - zh-CN
   - en
 ```
 
-当配置多种语言时，第一个将作为默认语言。
-
-### 文章设置
+## 📝 文章设置
 
 ### 创建新文章
 
-1. 使用 Hexo 命令创建新文章：
 ```bash
 hexo new post "文章标题"
 ```
 
-2. 这将在 `source/_posts/文章标题.md` 创建一个新的 markdown 文件
+<details>
+<summary>点击查看示例文章格式</summary>
 
-
-
-示例文章：
-
-```md
+```markdown
 ---
 title: VSC4T - 一个优雅的暗色系 Hexo 主题
 date: 2023-06-15 10:30:00
@@ -205,10 +190,11 @@ description: VSC4T 是一个受代码编辑器启发的 Hexo 暗色主题。
 
 这里是文章内容...
 ```
+</details>
 
-## 自定义样式
+## 🎨 自定义样式
 
-主题支持自定义 CSS 和 JS。在主题配置中：
+主题支持自定义 CSS 和 JS：
 
 ```yaml
 custom_css:
@@ -218,32 +204,28 @@ custom_js:
   - /js/mobile-menu.js
 ```
 
-## 移动端优化
+## 📱 移动端优化
 
-主题已针对移动设备优化。你可以在主题配置中调整移动端设置：
+主题已针对移动设备优化：
 
-```yaml
-mobile:
-  enabled: true
-  breakpoint: 768
-  nav_style: 'drawer'
-```
+- 响应式设计
+- 触摸友好的导航
+- 优化的阅读体验
 
-## 代码高亮
+## 🔍 搜索功能
 
-本主题默认使用内置代码高亮。你可以通过以下设置调整：
+主题包含强大的搜索功能：
 
-```yaml
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: true
-```
+- 全文搜索支持
+- 标题、内容、标签、分类过滤
+- 键盘导航（↑↓方向键和回车）
+- 搜索结果高亮
+- 上下文预览
 
-## 许可证
+## 📄 许可证
 
-本主题基于 MIT 许可证发布。
+本主题基于 [MIT 许可证](LICENSE) 发布。
 
-## 支持
+## 💬 支持
 
-如有任何问题或需要帮助，请在 GitHub 仓库提交 issue。
+如有任何问题或需要帮助，请在 [GitHub 仓库](https://github.com/B143KC47/VSC4T/issues) 提交 issue。

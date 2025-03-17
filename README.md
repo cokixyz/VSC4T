@@ -1,41 +1,43 @@
-# VSCat Theme for Hexo
+# 🐱 VSCat Theme for Hexo
 
-An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
+> An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
 
-[中文文档](README.zh-CN.md)
+[![中文文档](https://img.shields.io/badge/docs-中文文档-brightgreen)](README.zh-CN.md)
 
-![Black cat sitting at computer](cat.jpg)
+<div align="center">
+  <img src="cat.jpg" alt="Black cat sitting at computer" width="600">
+  <p><em>Image credit: <a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Black cat at work by Pixabay</a></em></p>
+</div>
 
-*Image credit: [Black cat at work by Pixabay](https://pixabay.com/photos/cat-black-cat-work-computer-963931/)*
+<div align="center">
+  <img src="VSC4T.png" alt="Demo Screenshot" width="800">
+  <h3>🌟 Live Demo</h3>
+</div>
 
-Demo:
+## ✨ Features
 
-![Demo Screenshot](VSC4T.png)
+- 🌙 **Dark mode optimized** - Designed for comfortable reading
+- 📱 **Fully responsive** - Perfect display on all devices
+- 🚀 **Fast loading** - Optimized performance
+- 🎨 **Clean design** - Minimalist and elegant interface
+- 🔍 **VS Code style search** - Familiar and powerful search functionality
 
-## Features
-
-- 🌙 Dark mode optimized
-- 📱 Fully responsive layout
-- 🚀 Fast loading performance
-- 🎨 Clean and minimalist design
-- 🔍 VS Code style search functionality
-
-## Installation
+## 🚀 Installation
 
 1. Navigate to your Hexo site's themes directory:
-```bash
-cd themes
-```
+   ```bash
+   cd themes
+   ```
 
 2. Clone this repository:
-```bash
-git clone https://github.com/B143KC47/VSC4T.git
-```
+   ```bash
+   git clone https://github.com/B143KC47/VSC4T.git
+   ```
 
 3. Set the theme in your site's configuration:
-```yaml
-theme: VSC4T
-```
+   ```yaml
+   theme: VSC4T
+   ```
 
 ## Required Configuration
 
@@ -54,54 +56,54 @@ Without enabling relative links, the theme may not deploy and function correctly
 This theme requires the following pages. Make sure to create them:
 
 1. Create Categories page:
-```bash
-hexo new page categories
-```
-Then edit `source/categories/index.md` and add 
-```
----
-title: categories
-layout: categories
----
-```
+   ```bash
+   hexo new page categories
+   ```
+   Then edit `source/categories/index.md` and add 
+   ```
+   ---
+   title: categories
+   layout: categories
+   ---
+   ```
 2. Create Tags page:
-```bash
-hexo new page tags
-```
-Then edit `source/tags/index.md` and add `type: "tags"`
-```
----
-title: tags
-layout: tags
----
-```
+   ```bash
+   hexo new page tags
+   ```
+   Then edit `source/tags/index.md` and add `type: "tags"`
+   ```
+   ---
+   title: tags
+   layout: tags
+   ---
+   ```
 3. Create About page:
-```bash
-hexo new page about
-```
-And add your personal information to `source/about/index.md`
-```
----
-title: about
-date: 2025-02-22 22:14:44
----
+   ```bash
+   hexo new page about
+   ```
+   And add your personal information to `source/about/index.md`
+   ```
+   ---
+   title: about
+   date: 2025-02-22 22:14:44
+   ---
 
-A very good simple theme
+   A very good simple theme
 
-```
+   ```
 4. Create Search page:
-```bash
-hexo new page search
-```
-Then edit `source/search/index.md` and add:
-```
----
-title: search
-layout: search
----
-```
+   ```bash
+   hexo new page search
+   ```
+   Then edit `source/search/index.md` and add:
+   ```
+   ---
+   title: search
+   layout: search
+   ---
+   ```
 
-## Theme Configuration
+## 🔧 Theme Configuration
 
 Modify the `_config.yml` in the theme directory:
 
@@ -136,31 +138,27 @@ prismjs:
   line_number: true
   line_threshold: 0
   tab_replace: ""
-
 ```
 
-## Language Configuration
+## 🌍 Language Support
 
-VSC4T theme supports multiple languages. To change the language, modify your site's `_config.yml`:
+<details>
+<summary>Click to expand supported languages</summary>
 
-```yaml
-language: en  # default language
-```
+- 🇺🇸 English (en)
+- 🇨🇳 Simplified Chinese (zh-CN)
+- 🇯🇵 Japanese (ja)
+- 🇰🇷 Korean (ko)
+- 🇫🇷 French (fr)
+- 🇩🇪 German (de)
+- 🇪🇸 Spanish (es)
+- 🇮🇹 Italian (it)
+- 🇷🇺 Russian (ru)
+- 🇵🇹 Portuguese (pt)
+- 🇦🇪 Arabic (ar)
+- 🇻🇳 Vietnamese (vi)
 
-### Supported Languages
-
-- English (en)
-- Simplified Chinese (zh-CN)
-- Japanese (ja)
-- Korean (ko)
-- French (fr)
-- German (de)
-- Spanish (es)
-- Italian (it)
-- Russian (ru)
-- Portuguese (pt)
-- Arabic (ar)
-- Vietnamese (vi)
+</details>
 
 ### Language Configuration Example
 
@@ -187,21 +185,18 @@ language:
 
 When multiple languages are configured, the first one will be used as the default language.
 
-## Blog Post Settings
+## 📝 Blog Post Settings
 
 ### Creating a New Post
 
-1. Create a new post using Hexo command:
 ```bash
 hexo new post "Your Post Title"
 ```
 
-2. This will create a new markdown file in `source/_posts/your-post-title.md`
+<details>
+<summary>Click to see example post format</summary>
 
-
-Example post:
-
-```
+```markdown
 ---
 title: VSC4T - A Dark and Elegant Hexo Theme
 date: 2023-06-15 10:30:00
@@ -213,6 +208,9 @@ description: Introducing VSC4T, a code editor inspired dark theme for Hexo blogs
 
 Your post content goes here...
 ```
+</details>
+
+2. This will create a new markdown file in `source/_posts/your-post-title.md`
 
 ## Custom Styling
 
@@ -226,16 +224,13 @@ custom_js:
   - /js/mobile-menu.js
 ```
 
-## Mobile Optimization
+## 📱 Mobile Optimization
 
-The theme is optimized for mobile devices. You can adjust mobile settings in the theme configuration:
+The theme is fully optimized for mobile devices with:
 
-```yaml
-mobile:
-  enabled: true
-  breakpoint: 768
-  nav_style: 'drawer'
-```
+- Responsive design
+- Touch-friendly navigation
+- Optimized reading experience
 
 ## Code Highlighting
 
@@ -286,10 +281,10 @@ The search interface includes filters for:
 
 Users can toggle these filters to narrow down their search results.
 
-## License
+## 📄 License
 
-This theme is released under the MIT License.
+This theme is released under the [MIT License](LICENSE).
 
-## Support
+## 💬 Support
 
-If you have any questions or need help, please open an issue in the GitHub repository.
+If you have any questions or need help, please [open an issue](https://github.com/B143KC47/VSC4T/issues) in the GitHub repository.
