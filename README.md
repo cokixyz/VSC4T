@@ -14,7 +14,7 @@
 </div>
 
 <div align="center">
-  <img src="VSC4T.png" alt="Demo Screenshot" width="800">
+  <img src="VSC4T2.png" alt="Demo Screenshot" width="800">
 </div>
 
 ## ✨ Features
