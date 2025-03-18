@@ -11,7 +11,10 @@
 
 <div align="center">
   <img src="VSC4T.png" alt="Demo Screenshot" width="800">
-  <h3>🌟 Live Demo</h3>
+</div>
+
+<div align="center">
+  <img src="VSC4T.png" alt="Demo Screenshot" width="800">
 </div>
 
 ## ✨ Features

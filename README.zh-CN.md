@@ -11,8 +11,12 @@
 
 <div align="center">
   <img src="VSC4T.png" alt="演示截图" width="800">
-  <h3>🌟 主题演示</h3>
 </div>
+
+<div align="center">
+  <img src="VSC4T2.png" alt="Demo Screenshot" width="800">
+</div>
+
 
 ## ✨ 特点
 
