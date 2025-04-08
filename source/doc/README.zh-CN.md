@@ -5,16 +5,16 @@
 [![English Documentation](https://img.shields.io/badge/docs-English-blue)](README.md)
 
 <div align="center">
-  <img src="cat.jpg" alt="黑猫坐在电脑前" width="600">
+  <img src="..\image\cat.jpg" alt="黑猫坐在电脑前" width="600">
   <p><em>图片来源：<a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Pixabay 的工作中的黑猫</a></em></p>
 </div>
 
 <div align="center">
-  <img src="VSC4T.png" alt="演示截图" width="800">
+  <img src="..\image\VSC4T.png" alt="演示截图" width="800">
 </div>
 
 <div align="center">
-  <img src="VSC4T2.png" alt="Demo Screenshot" width="800">
+  <img src="..\image\VSC4T2.png" alt="Demo Screenshot" width="800">
 </div>
 
 
