@@ -14,21 +14,50 @@
       </div>
     </div>
     
-    <!-- 相关文章 -->
+    <!-- 同分类文章 -->
+    <% if (page.categories && page.categories.length) { %>
     <div class="explorer-section">
       <div class="section-header">
-        <i class="fas fa-link"></i>
-        <span>RELATED POSTS</span>
+        <i class="fas fa-folder"></i>
+        <span>CATEGORY POSTS</span>
       </div>
       <div class="section-content">
-        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+        <% 
+          // 获取当前文章的第一个分类
+          var currentCategory = page.categories.data[0];
+          if (currentCategory) {
+            // 获取该分类下的所有文章
+            var categoryPosts = site.categories.findOne({name: currentCategory.name}).posts.sort('date', -1);
+            // 限制显示数量，并过滤掉当前文章
+            categoryPosts.filter(post => post._id !== page._id).limit(8).each(function(post) { 
+        %>
           <div class="file">
             <i class="fas fa-file-code"></i>
             <a href="<%- url_for(post.path) %>"><%= post.title %></a>
           </div>
+        <% })} %>
+      </div>
+    </div>
+    <% } %>
+    
+    <!-- 标签列表 -->
+    <% if (page.tags && page.tags.length) { %>
+    <div class="explorer-section">
+      <div class="section-header">
+        <i class="fas fa-tags"></i>
+        <span>ARTICLE TAGS</span>
+      </div>
+      <div class="section-content">
+        <% page.tags.each(function(tag){ %>
+          <div class="tag-item">
+            <i class="fas fa-tag"></i>
+            <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+            <span class="count">(<%= tag.posts.length %>)</span>
+          </div>
         <% }) %>
       </div>
     </div>
+    <% } %>
   </div>
 
   <!-- 主要内容区域 -->
