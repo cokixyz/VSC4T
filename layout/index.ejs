@@ -18,8 +18,10 @@
         <%_ site.categories.each(function(category){ _%>
           <div class="folder">
             <i class="fas fa-folder"></i>
-            <span><%- category.name %></span>
-            <span class="count">(<%- category.length %>)</span>
+            <a href="<%- url_for(category.path) %>" class="category-link">
+              <span><%- category.name %></span>
+              <span class="count">(<%- category.length %>)</span>
+            </a>
           </div>
         <%_ }); _%>
       </div>
