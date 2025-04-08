@@ -60,12 +60,28 @@
   padding: 1rem;
   background: var(--vscode-active);
   border-bottom: 1px solid var(--vscode-border);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-header:hover {
+  background: var(--vscode-highlight);
 }
 
 .category-header i {
   color: #dcb67a;
   font-size: 1.1rem;
   flex-shrink: 0;
+}
+
+.category-header .toggle-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  color: var(--vscode-text);
+}
+
+.category-header.collapsed .toggle-icon {
+  transform: rotate(-90deg);
 }
 
 .category-link {
@@ -100,6 +116,15 @@
   padding: 1rem;
   max-height: 400px;
   overflow-y: auto;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.category-posts.collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .category-posts::-webkit-scrollbar {

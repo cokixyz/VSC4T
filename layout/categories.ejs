@@ -31,16 +31,16 @@
     
     <div class="content-area">
       <div class="categories-overview">
-        <% site.categories.sort('name').each(function(category){ %>
-          <div class="category-section">
-            <div class="category-header">
+        <% site.categories.sort('name').each(function(category){ %>          <div class="category-section">
+            <div class="category-header collapsed">
               <i class="fas fa-folder"></i>
               <a href="<%- url_for(category.path) %>" class="category-link">
                 <h2><%= category.name %></h2>
               </a>
               <span class="count"><%= category.length %> posts</span>
+              <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
-            <div class="category-posts">
+            <div class="category-posts collapsed">
               <% category.posts.sort('date', -1).each(function(post){ %>
                 <div class="post-item">
                   <i class="fas fa-file-alt"></i>
