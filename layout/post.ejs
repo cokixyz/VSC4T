@@ -77,25 +77,28 @@
             <span class="date">
               <i class="fas fa-calendar-alt"></i>
               <%= date(page.date, config.date_format) %>
-            </span>
-            <% if (page.categories && page.categories.length) { %>
+            </span>            <% if (page.categories && page.categories.length) { %>
               <span class="categories">
                 <i class="fas fa-folder"></i>
-                <%- list_categories(page.categories, {
-                  show_count: false,
-                  style: 'none',
-                  separator: ', '
-                }) %>
+                <div class="categories-list">
+                  <%- list_categories(page.categories, {
+                    show_count: false,
+                    style: 'list',
+                    class: 'category-item-post'
+                  }) %>
+                </div>
               </span>
             <% } %>
             <% if (page.tags && page.tags.length) { %>
               <span class="tags">
                 <i class="fas fa-tags"></i>
-                <%- list_tags(page.tags, {
-                  show_count: false,
-                  style: 'none',
-                  separator: ', '
-                }) %>
+                <div class="tags-list">
+                  <%- list_tags(page.tags, {
+                    show_count: false,
+                    style: 'list',
+                    class: 'tag-item-post'
+                  }) %>
+                </div>
               </span>
             <% } %>
           </div>
