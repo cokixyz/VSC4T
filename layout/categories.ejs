@@ -35,7 +35,9 @@
           <div class="category-section">
             <div class="category-header">
               <i class="fas fa-folder"></i>
-              <h2><%= category.name %></h2>
+              <a href="<%- url_for(category.path) %>" class="category-link">
+                <h2><%= category.name %></h2>
+              </a>
               <span class="count"><%= category.length %> posts</span>
             </div>
             <div class="category-posts">
