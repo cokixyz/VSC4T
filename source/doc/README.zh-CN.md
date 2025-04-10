@@ -2,11 +2,15 @@
 
 > 一个优雅简约的 Hexo 主题，采用深色配色方案和代码风格设计美学。
 
+<div align="center">
+
 [![English Documentation](https://img.shields.io/badge/docs-English-blue)](../../README.md)
 [![GitHub license](https://img.shields.io/github/license/B143KC47/VSC4T)](../../LICENSE)
 [![Hexo](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue)](https://hexo.io)
 [![Node.js 版本](https://img.shields.io/badge/node-%3E%3D%2012.0-green.svg)](https://nodejs.org)
 [![CodeFactor](https://img.shields.io/badge/codefactor-A-orange)](https://www.codefactor.io/)
+
+</div>
 
 <div align="center">
   <img src="../image/cat.jpg" alt="黑猫坐在电脑前" width="600">

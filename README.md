@@ -1,6 +1,7 @@
 # 🐱 VSCat Theme for Hexo
 
 > An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
+<div align="center">
 
 [![中文文档](https://img.shields.io/badge/docs-中文文档-brightgreen)](source/doc/README.zh-CN.md)
 [![GitHub license](https://img.shields.io/github/license/B143KC47/VSC4T)](LICENSE)
@@ -8,13 +9,15 @@
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D%2012.0-green.svg)](https://nodejs.org)
 [![CodeFactor](https://img.shields.io/badge/codefactor-A-orange)](https://www.codefactor.io/)
 
+</div>
+
 <div align="center">
   <img src="source/image/cat.jpg" alt="Black cat sitting at computer" width="600">
   <p><em>Image credit: <a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Black cat at work by Pixabay</a></em></p>
 </div>
 
 <div align="center">
-  <img src="source/image/VSC4T1.png" alt="Demo Screenshot" width="800">
+  <img src="source/image/VSC4T.png" alt="Demo Screenshot" width="800">
 </div>
 
 <div align="center">
