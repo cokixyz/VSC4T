@@ -14,7 +14,7 @@
 </div>
 
 <div align="center">
-  <img src="..\image\VSC4T2.png" alt="Demo Screenshot" width="800">
+  <img src="..\image\VSC4T2.png" alt="演示截图" width="800">
 </div>
 
 

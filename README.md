@@ -10,7 +10,9 @@
   <img src="source/image/cat.jpg" alt="Black cat sitting at computer" width="600">
   <p><em>Image credit: <a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Black cat at work by Pixabay</a></em></p>
 </div>
-
+<div align="center">
+  <img src="source/image/VSC4T1.png" alt="Demo Screenshot" width="800">
+</div>
 <div align="center">
   <img src="source/image/VSC4T2.png" alt="Demo Screenshot" width="800">
 </div>
