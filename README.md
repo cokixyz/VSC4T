@@ -3,19 +3,37 @@
 > An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
 
 [![中文文档](https://img.shields.io/badge/docs-中文文档-brightgreen)](source/doc/README.zh-CN.md)
-
-
+[![GitHub license](https://img.shields.io/github/license/B143KC47/VSC4T)](LICENSE)
+[![Hexo](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue)](https://hexo.io)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D%2012.0-green.svg)](https://nodejs.org)
+[![CodeFactor](https://img.shields.io/badge/codefactor-A-orange)](https://www.codefactor.io/)
 
 <div align="center">
   <img src="source/image/cat.jpg" alt="Black cat sitting at computer" width="600">
   <p><em>Image credit: <a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Black cat at work by Pixabay</a></em></p>
 </div>
+
 <div align="center">
   <img src="source/image/VSC4T1.png" alt="Demo Screenshot" width="800">
 </div>
+
 <div align="center">
   <img src="source/image/VSC4T2.png" alt="Demo Screenshot" width="800">
 </div>
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [📊 Star History](#-star-history)
+- [🚀 Installation](#-installation)
+- [🔧 Configuration](#required-configuration)
+- [🌍 Language Support](#-language-support)
+- [📝 Blog Post Settings](#-blog-post-settings)
+- [🎨 Custom Styling](#custom-styling)
+- [📱 Mobile Optimization](#-mobile-optimization)
+- [🔍 Search Configuration](#search-configuration)
+- [📄 License](#-license)
+- [💬 Support](#-support)
 
 ## ✨ Features
 
@@ -24,6 +42,20 @@
 - 🚀 **Fast loading** - Optimized performance
 - 🎨 **Clean design** - Minimalist and elegant interface
 - 🔍 **VS Code style search** - Familiar and powerful search functionality
+- 📊 **Code highlighting** - Beautiful syntax highlighting in VS Code style
+- 🔧 **Easy configuration** - Simple and intuitive setup
+- 📂 **Explorer-like sidebar** - Intuitive navigation for categories and tags
+- 🌐 **Multi-language support** - 12 languages available out of the box
+
+## 📊 Star History
+
+<a href="https://star-history.com/#B143KC47/VSC4T">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=B143KC47/VSC4T&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=B143KC47/VSC4T&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=B143KC47/VSC4T&type=Date" />
+  </picture>
+</a>
 
 ## 🚀 Installation
 
@@ -178,15 +210,6 @@ language: ko
 language: fr
 ```
 
-You can also configure multiple languages:
-
-```yaml
-language: 
-  - en
-  - zh-CN
-```
-
-When multiple languages are configured, the first one will be used as the default language.
 
 ## 📝 Blog Post Settings
 
@@ -205,8 +228,6 @@ title: VSC4T - A Dark and Elegant Hexo Theme
 date: 2023-06-15 10:30:00
 tags: [hexo, theme, dark-mode, responsive]
 categories: [web-design, themes]
-toc: true
-description: Introducing VSC4T, a code editor inspired dark theme for Hexo blogs.
 ---
 
 Your post content goes here...

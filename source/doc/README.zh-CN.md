@@ -2,21 +2,39 @@
 
 > 一个优雅简约的 Hexo 主题，采用深色配色方案和代码风格设计美学。
 
-[![English Documentation](https://img.shields.io/badge/docs-English-blue)](README.md)
+[![English Documentation](https://img.shields.io/badge/docs-English-blue)](../../README.md)
+[![GitHub license](https://img.shields.io/github/license/B143KC47/VSC4T)](../../LICENSE)
+[![Hexo](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue)](https://hexo.io)
+[![Node.js 版本](https://img.shields.io/badge/node-%3E%3D%2012.0-green.svg)](https://nodejs.org)
+[![CodeFactor](https://img.shields.io/badge/codefactor-A-orange)](https://www.codefactor.io/)
 
 <div align="center">
-  <img src="..\image\cat.jpg" alt="黑猫坐在电脑前" width="600">
+  <img src="../image/cat.jpg" alt="黑猫坐在电脑前" width="600">
   <p><em>图片来源：<a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Pixabay 的工作中的黑猫</a></em></p>
 </div>
 
 <div align="center">
-  <img src="..\image\VSC4T.png" alt="演示截图" width="800">
+  <img src="../image/VSC4T.png" alt="演示截图" width="800">
 </div>
 
 <div align="center">
-  <img src="..\image\VSC4T2.png" alt="演示截图" width="800">
+  <img src="../image/VSC4T2.png" alt="演示截图" width="800">
 </div>
 
+## 📋 目录
+
+- [✨ 特点](#-特点)
+- [📊 Star History](#-star-history)
+- [🚀 安装](#-安装)
+- [📝 必要配置](#-必要配置)
+- [⚙️ 主题配置](#️-主题配置)
+- [🌍 语言配置](#-语言配置)
+- [📝 文章设置](#-文章设置)
+- [🎨 自定义样式](#-自定义样式)
+- [📱 移动端优化](#-移动端优化)
+- [🔍 搜索功能](#-搜索功能)
+- [📄 许可证](#-许可证)
+- [💬 支持](#-支持)
 
 ## ✨ 特点
 
@@ -24,6 +42,21 @@
 - 📱 **完全响应式布局** - 完美适配各种设备
 - 🚀 **快速加载性能** - 优化的性能表现
 - 🎨 **简洁极简设计** - 优雅的界面设计
+- 🔍 **VS Code 风格搜索** - 熟悉且强大的搜索功能
+- 📊 **代码高亮** - VS Code 风格的美观语法高亮
+- 🔧 **简易配置** - 简单直观的设置
+- 📂 **资源管理器式侧边栏** - 直观的分类和标签导航
+- 🌐 **多语言支持** - 内置12种语言支持
+
+## 📊 Star History
+
+<a href="https://star-history.com/#B143KC47/VSC4T">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=B143KC47/VSC4T&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=B143KC47/VSC4T&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=B143KC47/VSC4T&type=Date" />
+  </picture>
+</a>
 
 ## 🚀 安装
 
@@ -165,10 +198,6 @@ highlight:
 # 单语言设置
 language: zh-CN
 
-# 多语言设置
-language: 
-  - zh-CN
-  - en
 ```
 
 ## 📝 文章设置
@@ -188,8 +217,6 @@ title: VSC4T - 一个优雅的暗色系 Hexo 主题
 date: 2023-06-15 10:30:00
 tags: [hexo, 主题, 暗色模式, 响应式]
 categories: [网页设计, 主题]
-toc: true
-description: VSC4T 是一个受代码编辑器启发的 Hexo 暗色主题。
 ---
 
 这里是文章内容...
@@ -228,7 +255,7 @@ custom_js:
 
 ## 📄 许可证
 
-本主题基于 [MIT 许可证](LICENSE) 发布。
+本主题基于 [MIT 许可证](../../LICENSE) 发布。
 
 ## 💬 支持
 
