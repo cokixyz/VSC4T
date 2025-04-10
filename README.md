@@ -2,21 +2,17 @@
 
 > An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
 
-[![中文文档](https://img.shields.io/badge/docs-中文文档-brightgreen)](themes\VSC4T\source\doc\README.zh-CN.md)
+[![中文文档](https://img.shields.io/badge/docs-中文文档-brightgreen)](source/doc/README.zh-CN.md)
 
 
 
 <div align="center">
-  <img src="themes\VSC4T\source\image\cat.jpg" alt="Black cat sitting at computer" width="600">
+  <img src="source/image/cat.jpg" alt="Black cat sitting at computer" width="600">
   <p><em>Image credit: <a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Black cat at work by Pixabay</a></em></p>
 </div>
 
 <div align="center">
-  <img src="themes\VSC4T\source\image\VSC4T2.png" alt="Demo Screenshot" width="800">
-</div>
-
-<div align="center">
-  <img src="VSC4T2.png" alt="Demo Screenshot" width="800">
+  <img src="source/image/VSC4T2.png" alt="Demo Screenshot" width="800">
 </div>
 
 ## ✨ Features
