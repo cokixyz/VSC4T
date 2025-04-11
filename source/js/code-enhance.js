@@ -10,7 +10,38 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 添加代码块横向滚动指示
     addScrollIndicators();
+    
+    // 美化普通代码块
+    enhancePlainCodeBlocks();
 });
+
+// 美化普通代码块
+function enhancePlainCodeBlocks() {
+    // 选择所有不在figure.highlight内的代码块
+    const plainCodeBlocks = document.querySelectorAll('pre:not(.line-numbers-pre):not(.code-content)');
+    
+    plainCodeBlocks.forEach(pre => {
+        // 避免重复处理
+        if (pre.classList.contains('enhanced')) return;
+        
+        // 检查是否需要横向滚动
+        if (pre.scrollWidth > pre.clientWidth) {
+            pre.classList.add('scrollable');
+        }
+        
+        // 添加滚动事件
+        pre.addEventListener('scroll', function() {
+            if (this.scrollLeft > 0) {
+                this.classList.add('scrolled');
+            } else {
+                this.classList.remove('scrolled');
+            }
+        });
+        
+        // 标记为已增强
+        pre.classList.add('enhanced');
+    });
+}
 
 // 增强代码块功能
 function enhanceCodeBlocks() {
@@ -21,23 +52,73 @@ function enhanceCodeBlocks() {
         const langClass = Array.from(block.classList).find(cls => cls !== 'highlight');
         const language = langClass ? langClass.replace('language-', '') : 'code';
         
+        // 获取代码块内的表格元素
+        const table = block.querySelector('table');
+        if (!table) return;
+        
+        // 获取行号内容
+        const gutter = table.querySelector('.gutter pre');
+        const gutterLines = gutter ? Array.from(gutter.querySelectorAll('.line')).map(line => line.textContent) : [];
+        
+        // 获取代码内容
+        const code = table.querySelector('.code pre code');
+        const codeContent = code ? code.innerHTML : '';
+        
+        // 创建外部容器来包裹标题栏和代码块
+        const container = document.createElement('div');
+        container.className = 'code-block-container';
+        
         // 添加语言标签
-        if (!block.querySelector('.code-header')) {
-            const header = document.createElement('div');
-            header.className = 'code-header';
-            
-            const langLabel = document.createElement('span');
-            langLabel.className = 'code-language';
-            langLabel.textContent = language;
-            
-            header.appendChild(langLabel);
-            block.insertBefore(header, block.firstChild);
-        }
+        const header = document.createElement('div');
+        header.className = 'code-header';
+        
+        const langLabel = document.createElement('span');
+        langLabel.className = 'code-language';
+        langLabel.textContent = language;
+        
+        header.appendChild(langLabel);
+        
+        // 创建行号区域 - 直接使用pre元素
+        const lineNumbersPre = document.createElement('pre');
+        lineNumbersPre.className = 'line-numbers-pre';
+        
+        gutterLines.forEach(lineNum => {
+            const lineSpan = document.createElement('span');
+            lineSpan.className = 'line-num';
+            lineSpan.textContent = lineNum;
+            lineNumbersPre.appendChild(lineSpan);
+            lineNumbersPre.appendChild(document.createElement('br'));
+        });
+        
+        // 创建代码内容区域 - 修改这部分，使用正确的结构
+        const codePre = document.createElement('pre');
+        codePre.className = `code-content hljs ${language}`;
+        codePre.innerHTML = codeContent;
+        
+        // 创建包含两个pre的容器
+        const codeBlockWrapper = document.createElement('div');
+        codeBlockWrapper.className = 'code-pre-wrapper';
+        codeBlockWrapper.appendChild(lineNumbersPre);
+        codeBlockWrapper.appendChild(codePre);
+        
+        // 组装结构
+        container.appendChild(header);
+        container.appendChild(codeBlockWrapper);
+        
+        // 替换原始代码块
+        const parent = block.parentNode;
+        parent.insertBefore(container, block);
+        parent.removeChild(block);
         
         // 标记为可滚动
-        if (block.scrollWidth > block.clientWidth) {
-            block.classList.add('scrollable');
+        if (codePre.scrollWidth > codePre.clientWidth) {
+            codeBlockWrapper.classList.add('scrollable');
         }
+        
+        // 同步滚动
+        codePre.addEventListener('scroll', function() {
+            lineNumbersPre.scrollTop = this.scrollTop;
+        });
     });
 }
 
@@ -118,4 +199,4 @@ function addScrollIndicators() {
             }
         });
     });
-} 
+}

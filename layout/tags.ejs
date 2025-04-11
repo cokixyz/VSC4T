@@ -31,7 +31,6 @@
     <div class="content-area">
       <div class="tags-overview">
         <h1><i class="fas fa-tags"></i> All Tags</h1>
-        <p class="tags-description">所有标签按照字母顺序排列，点击标签查看相关文章</p>
         <div class="tags-cloud">
           <% site.tags.sort('name').each(function(tag){ %>
             <a class="tag-link" href="<%- url_for(tag.path) %>">
