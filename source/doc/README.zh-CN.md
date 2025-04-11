@@ -2,6 +2,20 @@
 
 > 一个优雅简约的 Hexo 主题，采用深色配色方案和代码风格设计美学。
 
+## ⭐ 支持主题
+
+
+如果您觉得这个主题有用，请考虑在 GitHub 上给它一颗星！您的支持有助于提高项目的可见度，并鼓励开发。
+
+<div align="center">
+  <a href="https://github.com/B143KC47/VSC4T">
+    <img src="https://img.shields.io/github/stars/B143KC47/VSC4T?style=social" alt="GitHub stars">
+  </a>
+  
+  <p>每一颗星都很重要，非常感激！🙏</p>
+</div>
+
+
 <div align="center">
 
 [![English Documentation](https://img.shields.io/badge/docs-English-blue)](../../README.md)

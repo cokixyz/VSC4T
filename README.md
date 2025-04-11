@@ -1,6 +1,19 @@
 # 🐱 VSCat Theme for Hexo
 
 > An elegant and minimalist theme for Hexo, designed with a dark color scheme and code-inspired aesthetics.
+
+## ⭐ Support the Project
+
+If you find this theme useful, please consider giving it a star on GitHub! Your support helps make the project more visible and encourages continued development.
+
+<div align="center">
+  <a href="https://github.com/B143KC47/VSC4T">
+    <img src="https://img.shields.io/github/stars/B143KC47/VSC4T?style=social" alt="GitHub stars">
+  </a>
+  
+  <p>Every star matters and is greatly appreciated! 🙏</p>
+</div>
+
 <div align="center">
 
 [![中文文档](https://img.shields.io/badge/docs-中文文档-brightgreen)](source/doc/README.zh-CN.md)
