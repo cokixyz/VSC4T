@@ -66,28 +66,41 @@ function enhanceCodeBlocks() {
         
         // 创建外部容器来包裹标题栏和代码块
         const container = document.createElement('div');
-        container.className = 'code-block-container';
-        
-        // 添加语言标签
+        container.className = 'code-block-container';        // 创建代码块头部
         const header = document.createElement('div');
         header.className = 'code-header';
         
+        // 创建左侧区域（包含语言标签）
+        const headerLeft = document.createElement('div');
+        headerLeft.className = 'code-header-left';
+        
+        // 创建右侧区域（可放置操作按钮）
+        const headerRight = document.createElement('div');
+        headerRight.className = 'code-header-right';
+        
+        // 创建语言标签
         const langLabel = document.createElement('span');
-        langLabel.className = 'code-language';
+        langLabel.className = `code-language language-${language.toLowerCase()}`;
         langLabel.textContent = language;
         
-        header.appendChild(langLabel);
+        // 如果没有检测到特定语言，添加默认类
+        if (language === 'code') {
+            langLabel.classList.add('language-default');
+        }
         
-        // 创建行号区域 - 直接使用pre元素
+        // 组装头部结构
+        headerLeft.appendChild(langLabel);
+        header.appendChild(headerLeft);
+        header.appendChild(headerRight);
+          // 创建行号区域 - 直接使用pre元素
         const lineNumbersPre = document.createElement('pre');
-        lineNumbersPre.className = 'line-numbers-pre';
-        
-        gutterLines.forEach(lineNum => {
-            const lineSpan = document.createElement('span');
-            lineSpan.className = 'line-num';
-            lineSpan.textContent = lineNum;
-            lineNumbersPre.appendChild(lineSpan);
-            lineNumbersPre.appendChild(document.createElement('br'));
+        lineNumbersPre.className = 'line-numbers-pre';        // 创建与代码行数完全对应的结构
+        gutterLines.forEach((lineNum) => {
+            const lineDiv = document.createElement('div');
+            lineDiv.className = 'line-num';
+            lineDiv.textContent = lineNum;
+            lineDiv.style.height = '1.5em'; // 确保每行高度一致
+            lineNumbersPre.appendChild(lineDiv);
         });
         
         // 创建代码内容区域 - 修改这部分，使用正确的结构

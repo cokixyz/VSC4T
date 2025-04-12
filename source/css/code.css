@@ -14,7 +14,6 @@
 figure.highlight {
   margin: 2em 0;
   background: #2b2b2b;
-  border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   overflow: hidden;
   width: 100%;
@@ -22,19 +21,9 @@ figure.highlight {
   position: relative;
 }
 
-/* 简化版代码块容器 */
-.code-pre-wrapper {
-  display: flex;
-  overflow: hidden;
-  background: #2b2b2b;
-  border-radius: 0 0 6px 6px;
-  width: 100%;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
 /* 行号pre样式 - 修复宽度问题 */
 .line-numbers-pre {
-  padding: 16px 12px;
+  padding: 6px;
   margin: 0;
   background: #252526;
   border-right: 1px solid #404040;
@@ -45,6 +34,10 @@ figure.highlight {
   width: auto; /* 根据内容自动调整宽度 */
   flex-shrink: 0; /* 防止被压缩 */
   overflow-y: hidden;
+  box-sizing: border-box; /* 确保边框盒模型一致 */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* 行号内的每个数字样式 */
@@ -52,16 +45,20 @@ figure.highlight {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   line-height: 1.5;
+  height: 1.5em; /* 明确指定高度 */
   display: block;
   padding-right: 0.5em; /* 确保数字右侧有适当空间 */
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
   white-space: nowrap;
+  box-sizing: border-box; /* 确保盒模型一致 */
 }
 
 /* 代码内容pre样式优化 */
 .code-content {
   padding: 16px;
   margin: 0;
-  flex-grow: 1; /* 允许占据剩余空间 */
   flex-shrink: 1; /* 允许在必要时收缩 */
   overflow-x: auto;
   font-family: 'JetBrains Mono', monospace;
@@ -71,6 +68,7 @@ figure.highlight {
   background: #1e1e1e;
   width: 0; /* 关键修改: 初始宽度为0，依靠flex-grow扩展 */
   min-width: 0; /* 确保可以收缩到容器大小 */
+  box-sizing: border-box; /* 确保边框盒模型一致 */
 }
 
 /* 确保代码元素内容可见 */
@@ -80,4 +78,16 @@ figure.highlight {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* 改进code-pre-wrapper布局 */
+.code-pre-wrapper {
+  display: flex;
+  overflow: hidden;
+  background: #2b2b2b;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  align-items: stretch; /* 确保子元素拉伸对齐 */
 }

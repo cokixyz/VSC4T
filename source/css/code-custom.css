@@ -66,7 +66,7 @@ pre:hover .copy-button,
 .highlight pre {
   background: #1e1e1e;
   color: #d4d4d4;
-  padding: 1rem;
+  padding: 16px; /* 从 1rem 改为 16px，保持一致 */
   overflow-x: auto;
   border-radius: 6px;
 }
@@ -154,7 +154,7 @@ pre:not(.line-numbers-pre):not(.code-content)::before {
 .line-numbers-pre {
   width: auto;
   flex: 0 0 auto;
-  padding: 16px 8px 16px 12px; /* 减小右侧内边距 */
+  padding: 16px; /* 统一内边距与代码区域保持一致 */
 }
 
 /* 代码内容区域自适应 */
@@ -163,6 +163,7 @@ pre:not(.line-numbers-pre):not(.code-content)::before {
   width: 0; /* 初始宽度为0，通过flex-grow伸展 */
   min-width: 0; /* 允许内容区域收缩 */
   overflow-x: auto;
+  padding: 16px !important; /* 强制设置 padding 为 16px，与行号区域保持一致 */
 }
 
 /* 提高代码可读性 */
@@ -183,11 +184,18 @@ pre:not(.line-numbers-pre):not(.code-content)::before {
 /* 在小屏幕上优化显示 */
 @media (max-width: 768px) {
   .line-numbers-pre {
-    padding: 16px 4px 16px 8px; /* 进一步减小内边距 */
+    padding: 16px 8px; /* 保持水平对称，减小水平内边距 */
   }
   
   .code-content {
-    padding: 16px 8px; /* 减小内边距 */
+    padding: 16px 8px; /* 与行号区域保持一致 */
+  }
+  
+  /* 确保移动设备上行号与代码内容对齐 */
+  .line-numbers-pre .line-num,
+  .code-content code {
+    line-height: 1.5;
+    height: 1.5em;
   }
 }
 
