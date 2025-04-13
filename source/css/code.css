@@ -71,15 +71,18 @@ figure.highlight {
   box-sizing: border-box; /* 确保边框盒模型一致 */
 }
 
-/* 确保代码元素内容可见 */
+/* 超长代码换行控制 */
 .code-content code {
-  display: block;
   white-space: pre;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  word-wrap: normal;
+  tab-size: 4;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
+}
+
+/* 确保代码内容中的每一行与行号对齐 */
+.code-content .line {
+  height: 1.5em;
+  line-height: 1.5;
 }
 
 /* 改进code-pre-wrapper布局 */
@@ -90,4 +93,6 @@ figure.highlight {
   width: 100%;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   align-items: stretch; /* 确保子元素拉伸对齐 */
+  height: auto !important;
+  position: relative; /* 为复制按钮提供定位上下文 */
 }
