@@ -139,7 +139,7 @@ function enhanceCodeBlocks() {
             const lineDiv = document.createElement('div');
             lineDiv.className = 'line-num';
             lineDiv.textContent = lineNum;
-            lineDiv.style.height = '1.5em'; // 确保每行高度一致
+            // lineDiv.style.height = '1.5em'; // 移除此行，让CSS控制高度
             lineNumbersPre.appendChild(lineDiv);
         });
         
@@ -155,7 +155,14 @@ function enhanceCodeBlocks() {
         
         // 将复制按钮添加到code-pre-wrapper中，使其悬浮在代码上方
         codeBlockWrapper.appendChild(copyButton);
-          // 组装结构
+          // 检测代码行数并应用相应样式
+        const lineCount = gutterLines.length;
+        if (lineCount < 4) {
+            codeBlockWrapper.classList.add('few-lines');
+            codeBlockWrapper.classList.add(`line-count-${lineCount}`);
+        }
+          
+        // 组装结构
         container.appendChild(header);
         container.appendChild(codeBlockWrapper);
         
