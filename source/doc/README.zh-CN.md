@@ -271,6 +271,28 @@ custom_js:
 - 搜索结果高亮
 - 上下文预览
 
+## 👨‍💻 贡献者
+
+感谢所有帮助改进这个主题的贡献者！
+
+<div align="center">
+  <a href="https://github.com/B143KC47/VSC4T/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=B143KC47/VSC4T" alt="贡献者">
+  </a>
+</div>
+
+### 如何贡献
+
+我们欢迎所有对VSC4T主题的改进贡献！以下是您可以提供帮助的方式：
+
+1. Fork 这个仓库
+2. 创建您的特性分支：`git checkout -b feature/amazing-feature`
+3. 提交您的更改：`git commit -m '添加一些很棒的特性'`
+4. 推送到分支：`git push origin feature/amazing-feature`
+5. 打开一个 Pull Request
+
+更多详情，请阅读我们的[贡献指南](CONTRIBUTING.zh-CN.md)。
+
 ## 📄 许可证
 
 本主题基于 [MIT 许可证](../../LICENSE) 发布。

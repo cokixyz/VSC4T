@@ -321,6 +321,28 @@ The search interface includes filters for:
 
 Users can toggle these filters to narrow down their search results.
 
+## 👨‍💻 Contributors
+
+Thanks to all the contributors who have helped make this theme better!
+
+<div align="center">
+  <a href="https://github.com/B143KC47/VSC4T/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=B143KC47/VSC4T" alt="Contributors">
+  </a>
+</div>
+
+### How to Contribute
+
+We welcome all contributions to improve VSC4T theme! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+For more details, please read our [Contributing Guidelines](CONTRIBUTING.md).
+
 ## 📄 License
 
 This theme is released under the [MIT License](LICENSE).
