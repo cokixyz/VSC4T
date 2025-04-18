@@ -176,14 +176,14 @@ root: /xxxxxx/  # If your website is deployed in a subdirectory, you need to con
 # _config.yml
 syntax_highlighter: highlight.js
 highlight:
-  auto_detect: false
+  auto_detect: true
   line_number: true
   line_threshold: 0
   tab_replace: ""
   exclude_languages:
     - example
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   preprocess: true
   line_number: true
