@@ -337,6 +337,7 @@ Thanks to all the contributors who have helped make this theme better!
   <a href="https://github.com/B143KC47/VSC4T/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=B143KC47/VSC4T" alt="Contributors">
   </a>
+  <p>Note: If contributors aren't showing correctly, they may need to have their contributions properly linked to their GitHub accounts. Check that commits are associated with GitHub emails.</p>
 </div>
 
 ### How to Contribute

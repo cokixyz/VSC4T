@@ -279,6 +279,7 @@ custom_js:
   <a href="https://github.com/B143KC47/VSC4T/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=B143KC47/VSC4T" alt="贡献者">
   </a>
+    <p>注意：如果贡献者没有正确显示，他们可能需要将其贡献正确链接到他们的GitHub账户。请确保提交与GitHub电子邮件关联。</p>
 </div>
 
 ### 如何贡献
