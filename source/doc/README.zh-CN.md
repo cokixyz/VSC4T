@@ -178,14 +178,14 @@ root: /xxxxxx/  # 如果你的网站部署在子目录中，需要设置 root �
 # 代码高亮配置
 syntax_highlighter: highlight.js
 highlight:
-  auto_detect: false
+  auto_detect: true
   line_number: true
   line_threshold: 0
   tab_replace: ""
   exclude_languages:
     - example
   wrap: true
-  hljs: false
+  hljs: true
 ```
 
 ## 🌍 语言配置
