@@ -102,6 +102,14 @@ relative_link: true
 
 Without enabling relative links, the theme may not deploy and function correctly.
 
+For proper code block rendering, set the following in your Hexo site's `_config.yml`:
+
+```yaml
+hljs: true
+```
+
+Otherwise you might encounter issues that code block rendered with empty lines.
+
 ### Create Required Pages
 
 This theme requires the following pages. Make sure to create them:
