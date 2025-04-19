@@ -102,6 +102,11 @@
 ```yaml
 relative_link: true
 ```
+为了正确渲染代码块，请在您的 Hexo 站点的 `_config.yml` 中设置以下内容：
+
+```yaml
+hljs: true
+```
 
 如不启用相对链接，主题可能无法正常工作。
 
