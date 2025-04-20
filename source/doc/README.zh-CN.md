@@ -1,42 +1,43 @@
-# 🐱 VSCat Hexo主题
+# 🐱 VSCat Hexo 主题
 
-> 一个优雅简约的Hexo主题，采用深色配色方案和代码风格美学设计。
+> 一个优雅简约的 Hexo 主题，采用深色配色方案和代码风格设计美学。
 
-## ⭐ 支持项目
+## ⭐ 支持主题
 
-如果您觉得这个主题有用，请考虑在GitHub上给它点个星！您的支持有助于提高项目知名度并鼓励持续开发。
+
+如果您觉得这个主题有用，请考虑在 GitHub 上给它一颗星！您的支持有助于提高项目的可见度，并鼓励开发。
 
 <div align="center">
   <a href="https://github.com/B143KC47/VSC4T">
-    <img src="https://img.shields.io/github/stars/B143KC47/VSC4T?style=social" alt="GitHub 星标">
+    <img src="https://img.shields.io/github/stars/B143KC47/VSC4T?style=social" alt="GitHub stars">
   </a>
   
-  <p>每一颗星都很重要，非常感谢您的支持！🙏</p>
+  <p>每一颗星都很重要，非常感激！🙏</p>
 </div>
+
 
 <div align="center">
 
-[![英文文档](https://img.shields.io/badge/docs-English-brightgreen)](../../../README.md)
-[![GitHub许可证](https://img.shields.io/github/license/B143KC47/VSC4T)](LICENSE)
+[![English Documentation](https://img.shields.io/badge/docs-English-blue)](../../README.md)
+[![GitHub license](https://img.shields.io/github/license/B143KC47/VSC4T)](../../LICENSE)
 [![Hexo](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue)](https://hexo.io)
-[![Node.js版本](https://img.shields.io/badge/node-%3E%3D%2012.0-green.svg)](https://nodejs.org)
+[![Node.js 版本](https://img.shields.io/badge/node-%3E%3D%2012.0-green.svg)](https://nodejs.org)
 [![CodeFactor](https://img.shields.io/badge/codefactor-A-orange)](https://www.codefactor.io/)
 
 </div>
 
 <div align="center">
-  <img src="source/image/cat.jpg" alt="黑猫坐在电脑前" width="600">
-  <p><em>图片来源: <a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">工作中的黑猫 - Pixabay</a></em></p>
+  <img src="../image/cat.jpg" alt="黑猫坐在电脑前" width="600">
+  <p><em>图片来源：<a href="https://pixabay.com/photos/cat-black-cat-work-computer-963931/">Pixabay 的工作中的黑猫</a></em></p>
 </div>
 
 <div align="center">
-  <img src="source/image/VSC4T.png" alt="演示截图" width="800">
+  <img src="../image/VSC4T.png" alt="演示截图" width="800">
 </div>
 
 <div align="center">
-  <img src="source/image/VSC4T2.png" alt="演示截图" width="800">
+  <img src="../image/VSC4T2.png" alt="演示截图" width="800">
 </div>
-
 ## 📋 目录
 
 - [✨ 特性](#-特性)
