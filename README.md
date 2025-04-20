@@ -62,6 +62,7 @@ If you find this theme useful, please consider giving it a star on GitHub! Your 
 - 🔧 **Easy configuration** - Simple and intuitive setup
 - 📂 **Explorer-like sidebar** - Intuitive navigation for categories and tags
 - 🌐 **Multi-language support** - 12 languages available out of the box
+- 🧜🏻‍♀️ **Mermaid diagrams support** - Integrated support for Mermaid diagrams
 
 ## 📊 Star History
 
@@ -289,6 +290,13 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
+```
+
+## Mermaid Diagrams Support
+The theme support mermaid diagrams, you need to install the following plugin to make sure it can render properly:
+
+```bash
+npm install hexo-filter-mermaid-diagrams
 ```
 
 ## Search Configuration
