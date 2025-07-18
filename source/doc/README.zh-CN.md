@@ -37,16 +37,19 @@
 
 <div align="center">
   <img src="../image/VSC4T2.png" alt="演示截图" width="800">
-</div>ss
+</div>
 
 ## 🎥 演示视频
 
 <div align="center">
-  <a href="https://youtu.be/CmDWGq5nPT4?si=2c-xa0xXXhF1vbB3">
-    <img src="https://img.youtube.com/vi/CmDWGq5nPT4/maxresdefault.jpg" alt="VSCat 主题安装演示视频" width="600">
+  <a href="https://www.youtube.com/watch?v=CmDWGq5nPT4">
+    <img src="https://www.youtube.com/watch?v=CmDWGq5nPT4/maxresdefault.jpg" alt="VSCat 主题安装演示视频" width="600">
   </a>
   <p><em>点击观看 VSCat 主题安装演示视频</em></p>
 </div>
+
+
+
 ## 📋 目录
 
 - [✨ 特性](#-特性)
