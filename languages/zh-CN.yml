@@ -24,3 +24,9 @@ search_recent: 最近搜索
 search_clear: 清除
 search_loading: 加载中...
 search_error: 加载搜索数据时出错
+
+# 推荐文章
+recommended_posts: 相关文章
+similarity: 相似度
+view_more_posts: 查看更多文章
+min_read: 分钟阅读

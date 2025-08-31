@@ -25,3 +25,9 @@ search_recent: Recent Searches
 search_clear: Clear
 search_loading: Loading...
 search_error: Error loading search data
+
+# Recommended posts
+recommended_posts: RELATED POSTS
+similarity: Similarity
+view_more_posts: View More Posts
+min_read: min read
