@@ -7,6 +7,7 @@ search: Buscar
 previous: Anterior
 next: Siguiente
 read_more: Leer más
+pinned_post: Artículo fijado
 
 # Search functionality
 search_placeholder: Escriba para buscar...

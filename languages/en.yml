@@ -7,6 +7,7 @@ search: Search
 previous: Previous
 next: Next
 read_more: Read More
+pinned_post: Pinned Post
 
 # Search functionality
 search_placeholder: Type to search...

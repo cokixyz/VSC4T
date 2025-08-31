@@ -63,6 +63,8 @@ If you find this theme useful, please consider giving it a star on GitHub! Your 
 - 📂 **Explorer-like sidebar** - Intuitive navigation for categories and tags
 - 🌐 **Multi-language support** - 12 languages available out of the box
 - 🧜🏻‍♀️ **Mermaid diagrams support** - Integrated support for Mermaid diagrams
+- 📌 **Sticky posts** - Pin important posts to the top of your blog
+- 🎨 **Custom favicon support** - Multi-format favicon configuration
 
 ## 📊 Star History
 
@@ -260,6 +262,51 @@ Your post content goes here...
 </details>
 
 2. This will create a new markdown file in `source/_posts/your-post-title.md`
+
+### Creating a Sticky/Pinned Post
+
+To make a post stick to the top of your homepage and archive:
+
+```markdown
+---
+title: Important Announcement
+date: 2024-01-01 10:00:00
+sticky: true
+tags: [announcement]
+categories: [news]
+---
+
+Your important content here...
+```
+
+Sticky posts will:
+- Always appear at the top of post lists
+- Display a pin icon (📌) indicator
+- Maintain chronological order among other sticky posts
+
+## Favicon Configuration
+
+The theme supports custom favicon configuration with multiple formats and sizes for different devices:
+
+1. Place your favicon files in the theme's `source/` directory
+2. Configure the paths in the theme's `_config.yml`:
+
+```yaml
+# Favicon configuration
+favicon:
+  ico: /favicon.ico                    # Traditional favicon format
+  small: /favicon-16x16.png           # 16x16 PNG
+  medium: /favicon-32x32.png          # 32x32 PNG
+  large: /favicon-192x192.png         # 192x192 PNG (Android)
+  apple_touch_icon: /apple-touch-icon.png  # 180x180 (iOS)
+```
+
+Recommended favicon sizes:
+- `favicon.ico`: Multi-resolution ICO file
+- `favicon-16x16.png`: For browser tabs
+- `favicon-32x32.png`: For browser shortcuts
+- `favicon-192x192.png`: For Android devices
+- `apple-touch-icon.png`: 180x180 for iOS devices
 
 ## Custom Styling
 

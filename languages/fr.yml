@@ -8,6 +8,7 @@ search: "Rechercher"
 previous: "Précédent"
 next: "Suivant"
 read_more: "Lire la suite"
+pinned_post: "Article épinglé"
 
 # 搜索功能
 search_placeholder: "Tapez pour rechercher..."

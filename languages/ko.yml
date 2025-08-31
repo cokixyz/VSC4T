@@ -8,6 +8,7 @@ search: "검색"
 previous: "이전 글"
 next: "다음 글"
 read_more: "더 보기"
+pinned_post: "고정된 글"
 
 # 搜索功能
 search_placeholder: "검색어 입력..."

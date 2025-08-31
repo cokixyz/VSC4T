@@ -76,6 +76,8 @@
 - 📂 **资源管理器风格侧边栏** - 直观导航分类和标签
 - 🌐 **多语言支持** - 内置12种语言
 - 🧜🏻‍♀️ **Mermaid图表支持** - 集成支持Mermaid图表
+- 📌 **文章置顶** - 将重要文章固定在博客顶部
+- 🎨 **自定义网站图标支持** - 多格式网站图标配置
 
 ## 📊 星标历史
 
@@ -273,6 +275,51 @@ categories: [网页设计, 主题]
 </details>
 
 2. 这将在 `source/_posts/your-post-title.md` 创建一个新的markdown文件
+
+### 创建置顶文章
+
+要使文章置顶在您的主页和归档页面：
+
+```markdown
+---
+title: 重要公告
+date: 2024-01-01 10:00:00
+sticky: true
+tags: [公告]
+categories: [新闻]
+---
+
+您的重要内容在这里...
+```
+
+置顶文章将：
+- 始终显示在文章列表顶部
+- 显示固定图标（📌）指示器
+- 在其他置顶文章中保持时间顺序
+
+## 网站图标配置
+
+主题支持自定义网站图标配置，支持多种格式和尺寸以适配不同设备：
+
+1. 将您的网站图标文件放在主题的 `source/` 目录中
+2. 在主题的 `_config.yml` 中配置路径：
+
+```yaml
+# 网站图标配置
+favicon:
+  ico: /favicon.ico                    # 传统网站图标格式
+  small: /favicon-16x16.png           # 16x16 PNG
+  medium: /favicon-32x32.png          # 32x32 PNG
+  large: /favicon-192x192.png         # 192x192 PNG (Android)
+  apple_touch_icon: /apple-touch-icon.png  # 180x180 (iOS)
+```
+
+推荐的网站图标尺寸：
+- `favicon.ico`：多分辨率 ICO 文件
+- `favicon-16x16.png`：用于浏览器标签
+- `favicon-32x32.png`：用于浏览器快捷方式
+- `favicon-192x192.png`：用于 Android 设备
+- `apple-touch-icon.png`：180x180 用于 iOS 设备
 
 ## 自定义样式
 

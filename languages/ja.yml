@@ -8,6 +8,7 @@ search: "検索"
 previous: "前の記事"
 next: "次の記事"
 read_more: "続きを読む"
+pinned_post: "固定記事"
 
 # 搜索功能
 search_placeholder: "検索するキーワードを入力..."

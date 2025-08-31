@@ -29,6 +29,11 @@
                   <i class="fas fa-file-alt"></i>
                   <a href="<%- url_for(post.path) %>">
                     <%= date(post.date, 'MM-DD') %> <%= post.title %>
+                    <% if (post.sticky || post.top) { %>
+                      <span class="sticky-indicator" title="<%= __('pinned_post') || 'Pinned Post' %>">
+                        <i class="fas fa-thumbtack"></i>
+                      </span>
+                    <% } %>
                   </a>
                 </div>
               <% }); %>
@@ -73,7 +78,14 @@
                     <%= date(post.date, 'MM-DD') %>
                   </div>
                   <div class="post-info">
-                    <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                    <a href="<%- url_for(post.path) %>">
+                      <%= post.title %>
+                      <% if (post.sticky || post.top) { %>
+                        <span class="sticky-indicator" title="<%= __('pinned_post') || 'Pinned Post' %>">
+                          <i class="fas fa-thumbtack"></i>
+                        </span>
+                      <% } %>
+                    </a>
                     <div class="post-meta">
                       <% if (post.categories && post.categories.length){ %>
                         <span class="category">
