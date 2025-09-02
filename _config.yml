@@ -16,6 +16,8 @@ menu:
 
 # 样式配置
 style:
+  # 颜色方案 ('dark' 或 'white')
+  colorscheme: 'white'
   # 主题色（代码编辑器深色主题）
   theme_color: '#1e1e1e'
   # 链接色

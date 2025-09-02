@@ -129,6 +129,15 @@ ln -s /path/to/your/VSC4T themes/VSC4T
 6. Configure the test site to use your theme by editing `_config.yml`: | 通过编辑 `_config.yml` 配置测试站点使用您的主题：
 ```yaml
 theme: VSC4T
+relative_link: true
+hljs: true
+```
+
+7. Test theme switching (dark/white themes): | 测试主题切换（深色/浅色主题）：
+```yaml
+# In theme's _config.yml | 在主题的 _config.yml 中
+style:
+  colorscheme: 'dark'  # or 'white' | 或 'white'
 ```
 
 ### File Structure | 文件结构
@@ -162,6 +171,22 @@ The theme is structured as follows: | 主题结构如下：
 - Write one property per line | 每行写一个属性
 - Use hyphen-case for class names (e.g., `.my-class-name`) | 类名使用连字符命名法（例如，`.my-class-name`）
 - Follow the [Airbnb CSS/SASS Style Guide](https://github.com/airbnb/css) | 遵循 [Airbnb CSS/SASS 风格指南](https://github.com/airbnb/css)
+
+#### Theme Colors and CSS Variables | 主题颜色和 CSS 变量
+
+- Always use CSS variables for colors defined in `theme-colors.css` | 始终使用 `theme-colors.css` 中定义的 CSS 变量作为颜色
+- Never hardcode colors that should change with theme | 不要硬编码应随主题更改的颜色
+- Test all CSS changes with both dark and white themes | 测试所有 CSS 更改在深色和浅色主题下的效果
+- When adding new colors, define them for both themes: | 添加新颜色时，需要为两个主题定义：
+```css
+:root[data-theme="dark"] {
+  --new-color: #value-for-dark;
+}
+:root[data-theme="white"] {
+  --new-color: #value-for-light;
+}
+```
+- Use semantic color names (e.g., `--vscode-link`, `--vscode-error`) | 使用语义化的颜色名称（例如，`--vscode-link`，`--vscode-error`）
 
 #### EJS Templates
 

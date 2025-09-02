@@ -43,6 +43,7 @@ If you find this theme useful, please consider giving it a star on GitHub! Your 
 - [📊 Star History](#-star-history)
 - [🚀 Installation](#-installation)
 - [🔧 Configuration](#required-configuration)
+- [🎨 Theme Color Switching](#-theme-color-switching)
 - [🌍 Language Support](#-language-support)
 - [📝 Blog Post Settings](#-blog-post-settings)
 - [🎨 Custom Styling](#custom-styling)
@@ -54,6 +55,7 @@ If you find this theme useful, please consider giving it a star on GitHub! Your 
 ## ✨ Features
 
 - 🌙 **Dark mode optimized** - Designed for comfortable reading
+- ☀️ **Light/Dark theme switching** - Choose between VS Code Dark+ and Light+ themes
 - 📱 **Fully responsive** - Perfect display on all devices
 - 🚀 **Fast loading** - Optimized performance
 - 🎨 **Clean design** - Minimalist and elegant interface
@@ -175,6 +177,11 @@ name: BlackCat
 description: A simple dark Hexo theme inspired by code.
 author: YourName
 
+# Style Configuration
+style:
+  # Color scheme ('dark' or 'white')
+  colorscheme: 'dark'
+
 # Basic Website Configuration
 url: https://b143kc47.github.io/VSC4T 
 root: /VSC4T/ 
@@ -201,6 +208,61 @@ prismjs:
   line_threshold: 0
   tab_replace: ""
 ```
+
+## 🎨 Theme Color Switching
+
+VSC4T now supports both dark and light themes inspired by VS Code's Dark+ and Light+ color schemes.
+
+### Switching Between Themes
+
+To switch between dark and light themes, modify the `colorscheme` setting in the theme's `_config.yml`:
+
+```yaml
+# Style configuration
+style:
+  # Color scheme ('dark' or 'white')
+  colorscheme: 'dark'  # Use 'white' for light theme
+```
+
+### Available Color Schemes
+
+- **`dark`** - VS Code Dark+ inspired theme (default)
+  - Dark backgrounds with light text
+  - Optimized for low-light environments
+  - Reduces eye strain during night coding sessions
+
+- **`white`** - VS Code Light+ inspired theme
+  - Light backgrounds with dark text
+  - Perfect for well-lit environments
+  - Clean and professional appearance
+
+### How to Apply Theme Changes
+
+After changing the `colorscheme` setting:
+
+1. Clean your Hexo cache:
+   ```bash
+   hexo clean
+   ```
+
+2. Regenerate your site:
+   ```bash
+   hexo generate
+   ```
+
+3. Start your server to see the changes:
+   ```bash
+   hexo server
+   ```
+
+### Troubleshooting Theme Switching
+
+If the theme doesn't change after updating the configuration:
+
+1. **Clear browser cache** - Use Ctrl+F5 or Cmd+Shift+R to hard refresh
+2. **Try incognito mode** - Test in a private browser window
+3. **Check configuration** - Ensure the `colorscheme` value is exactly 'dark' or 'white'
+4. **Verify file generation** - Make sure `hexo clean` and `hexo generate` completed successfully
 
 ## 🌍 Language Support
 

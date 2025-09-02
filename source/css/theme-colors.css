@@ -1,0 +1,121 @@
+/* Theme color definitions for dark and white themes */
+
+/* Dark theme (VS Code Dark+) */
+:root[data-theme="dark"] {
+  /* 基础颜色 */
+  --vscode-bg: #1e1e1e;
+  --vscode-bg-light: #252526;
+  --vscode-sidebar: #252526;
+  --vscode-text: #d4d4d4;
+  --vscode-text-light: #a7a7a7;
+  --vscode-active: #37373d;
+  --vscode-highlight: #264f78;
+  --vscode-border: #474747;
+  --vscode-border-light: #404040;
+  
+  /* 强调色 */
+  --vscode-accent: #0078d4;
+  --vscode-accent-light: #3794ff;
+  --vscode-selection: rgba(38, 79, 120, 0.6);
+  --vscode-line-highlight: rgba(255, 255, 255, 0.04);
+  --vscode-shadow: rgba(0, 0, 0, 0.24);
+  
+  /* 语义化颜色 */
+  --vscode-link: #569cd6;
+  --vscode-link-hover: #78b8ff;
+  --vscode-success: #608b4e;
+  --vscode-warning: #dcb67a;
+  --vscode-error: #f48771;
+  --vscode-info: #569cd6;
+  
+  /* 代码颜色 */
+  --vscode-code-bg: #2d2d30;
+  --vscode-code-border: #404040;
+  --vscode-code-text: #ce9178;
+  
+  /* 特殊元素 */
+  --vscode-header-bg: #1e1e1e;
+  --vscode-header-border: #2d2d2d;
+  --vscode-footer-bg: #1e1e1e;
+  --vscode-scrollbar: #474747;
+}
+
+/* White theme (VS Code Light+) */
+:root[data-theme="white"] {
+  /* 基础颜色 */
+  --vscode-bg: #ffffff;
+  --vscode-bg-light: #f3f3f3;
+  --vscode-sidebar: #f3f3f3;
+  --vscode-text: #1e1e1e;
+  --vscode-text-light: #6e6e6e;
+  --vscode-active: #e8e8e8;
+  --vscode-highlight: #add6ff;
+  --vscode-border: #e0e0e0;
+  --vscode-border-light: #cccccc;
+  
+  /* 强调色 */
+  --vscode-accent: #0078d4;
+  --vscode-accent-light: #007acc;
+  --vscode-selection: rgba(0, 120, 212, 0.2);
+  --vscode-line-highlight: rgba(0, 0, 0, 0.04);
+  --vscode-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* 语义化颜色 */
+  --vscode-link: #0066b8;
+  --vscode-link-hover: #0078d4;
+  --vscode-success: #2e7d2e;
+  --vscode-warning: #bf8803;
+  --vscode-error: #d2282e;
+  --vscode-info: #0066b8;
+  
+  /* 代码颜色 */
+  --vscode-code-bg: #f8f8f8;
+  --vscode-code-border: #e0e0e0;
+  --vscode-code-text: #a31515;
+  
+  /* 特殊元素 */
+  --vscode-header-bg: #ffffff;
+  --vscode-header-border: #e0e0e0;
+  --vscode-footer-bg: #f3f3f3;
+  --vscode-scrollbar: #c1c1c1;
+}
+
+/* 默认使用暗色主题 */
+:root {
+  /* 基础颜色 */
+  --vscode-bg: #1e1e1e;
+  --vscode-bg-light: #252526;
+  --vscode-sidebar: #252526;
+  --vscode-text: #d4d4d4;
+  --vscode-text-light: #a7a7a7;
+  --vscode-active: #37373d;
+  --vscode-highlight: #264f78;
+  --vscode-border: #474747;
+  --vscode-border-light: #404040;
+  
+  /* 强调色 */
+  --vscode-accent: #0078d4;
+  --vscode-accent-light: #3794ff;
+  --vscode-selection: rgba(38, 79, 120, 0.6);
+  --vscode-line-highlight: rgba(255, 255, 255, 0.04);
+  --vscode-shadow: rgba(0, 0, 0, 0.24);
+  
+  /* 语义化颜色 */
+  --vscode-link: #569cd6;
+  --vscode-link-hover: #78b8ff;
+  --vscode-success: #608b4e;
+  --vscode-warning: #dcb67a;
+  --vscode-error: #f48771;
+  --vscode-info: #569cd6;
+  
+  /* 代码颜色 */
+  --vscode-code-bg: #2d2d30;
+  --vscode-code-border: #404040;
+  --vscode-code-text: #ce9178;
+  
+  /* 特殊元素 */
+  --vscode-header-bg: #1e1e1e;
+  --vscode-header-border: #2d2d2d;
+  --vscode-footer-bg: #1e1e1e;
+  --vscode-scrollbar: #474747;
+}

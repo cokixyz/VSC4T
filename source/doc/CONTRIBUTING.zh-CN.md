@@ -105,6 +105,15 @@ ln -s /path/to/your/VSC4T themes/VSC4T
 6. 通过编辑 `_config.yml` 配置测试站点使用您的主题：
 ```yaml
 theme: VSC4T
+relative_link: true
+hljs: true
+```
+
+7. 测试主题切换（深色/浅色主题）：
+```yaml
+# 在主题的 _config.yml 中
+style:
+  colorscheme: 'dark'  # 或 'white'
 ```
 
 ### 文件结构
@@ -138,6 +147,22 @@ theme: VSC4T
 - 每行写一个属性
 - 使用连字符命名法（如 `.my-class-name`）
 - 遵循 [Airbnb CSS/SASS 风格指南](https://github.com/airbnb/css)
+
+#### 主题颜色和 CSS 变量
+
+- 始终使用 `theme-colors.css` 中定义的 CSS 变量作为颜色
+- 不要硬编码应随主题更改的颜色
+- 测试所有 CSS 更改在深色和浅色主题下的效果
+- 添加新颜色时，需要为两个主题定义：
+```css
+:root[data-theme="dark"] {
+  --new-color: #value-for-dark;
+}
+:root[data-theme="white"] {
+  --new-color: #value-for-light;
+}
+```
+- 使用语义化的颜色名称（例如，`--vscode-link`，`--vscode-error`）
 
 #### EJS 模板
 

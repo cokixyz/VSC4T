@@ -3,20 +3,6 @@
  * 保持与主题整体VSCode风格的一致性
  */
 
-/* 变量定义 - 与VSCode主题颜色保持一致 */
-:root {
-  --vscode-bg: #1e1e1e;
-  --vscode-bg-light: #252526;
-  --vscode-border: #404040;
-  --vscode-text: #d4d4d4;
-  --vscode-text-light: #a7a7a7;
-  --vscode-accent: #0e639c;
-  --vscode-accent-light: #3794ff;
-  --vscode-selection: rgba(38, 79, 120, 0.6);
-  --vscode-line-highlight: rgba(255, 255, 255, 0.04);
-  --vscode-shadow: rgba(0, 0, 0, 0.24);
-}
-
 /* ==================== 表格样式 ==================== */
 table {
   width: 100%;
