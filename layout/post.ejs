@@ -108,7 +108,20 @@
           <%- page.content %>
         </div>
         
-        <!-- 文章导航 -->
+        <!-- 文章导航 - 只在同分类有多篇文章时显示 -->
+        <% 
+          // 检查当前文章是否有分类，以及同分类是否有其他文章
+          var showPostNav = false;
+          if (page.categories && page.categories.length > 0) {
+            var currentCategory = page.categories.data[0];
+            if (currentCategory) {
+              var categoryPosts = site.categories.findOne({name: currentCategory.name}).posts;
+              showPostNav = categoryPosts.length > 1;
+            }
+          }
+        %>
+        
+        <% if (showPostNav && (page.prev || page.next)) { %>
         <nav class="post-nav">
           <% if (page.prev) { %>
             <a class="prev" href="<%- url_for(page.prev.path) %>">
@@ -123,6 +136,7 @@
             </a>
           <% } %>
         </nav>
+        <% } %>
         
         <!-- 推荐文章 -->
         <%- partial('_partial/post/recommended') %>
