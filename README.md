@@ -49,6 +49,7 @@ If you find this theme useful, please consider giving it a star on GitHub! Your 
 - [🎨 Custom Styling](#custom-styling)
 - [📱 Mobile Optimization](#-mobile-optimization)
 - [🔍 Search Configuration](#search-configuration)
+- [💬 Comment System Configuration](#-comment-system-configuration)
 - [📄 License](#-license)
 - [💬 Support](#-support)
 
@@ -67,6 +68,7 @@ If you find this theme useful, please consider giving it a star on GitHub! Your 
 - 🧜🏻‍♀️ **Mermaid diagrams support** - Integrated support for Mermaid diagrams
 - 📌 **Sticky posts** - Pin important posts to the top of your blog
 - 🎨 **Custom favicon support** - Multi-format favicon configuration
+- 💬 **Multiple comment systems** - Support for Waline and Disqus with theme auto-switching
 
 ## 📊 Star History
 
@@ -445,6 +447,76 @@ The search interface includes filters for:
 - Categories
 
 Users can toggle these filters to narrow down their search results.
+
+## 💬 Comment System Configuration
+
+The theme now supports multiple comment systems with automatic theme switching between dark and light modes.
+
+### Supported Comment Systems
+
+- **Waline** (Recommended) - Privacy-friendly, no login required
+- **Disqus** - Traditional comment system
+
+### Configuring Waline (Recommended)
+
+Waline is a privacy-friendly comment system that allows anonymous comments without requiring login. It's perfect for readers who want to comment without creating an account.
+
+1. Deploy Waline server (Free options):
+   - **Vercel** (Recommended): [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/walinejs/waline/tree/main/example)
+   - **Railway**: [Deploy to Railway](https://railway.app/template/1LZnmQ)
+   - Other options: [Waline Quick Start](https://waline.js.org/en/guide/get-started/)
+
+2. Update the theme's `_config.yml`:
+
+```yaml
+# Comment System Configuration
+comments:
+  provider: waline  # Options: 'waline' | 'disqus' | false
+  
+  # Waline Configuration
+  waline:
+    serverURL: https://your-domain.vercel.app  # Your Waline server URL
+    lang: en  # or zh-CN for Chinese
+    locale: {}  # Custom locale
+    emoji:
+      - https://unpkg.com/@waline/emojis@1.2.0/weibo
+    requiredMeta: []  # No required fields for anonymous comments
+    login: disable  # Disable login to allow anonymous comments
+    wordLimit: 0  # Comment word limit, 0 for no limit
+    pageSize: 10  # Comments per page
+    imageUploader: false  # Disable image upload
+```
+
+### Configuring Disqus
+
+```yaml
+comments:
+  provider: disqus
+  
+  disqus:
+    shortname: your-disqus-shortname
+```
+
+### Features
+
+- 🎨 **Automatic theme switching** - Comments adapt to VS Code dark/light theme
+- 📱 **Responsive design** - Works perfectly on all devices
+- 🌍 **Multi-language support** - Follows your site's language setting
+- 🚀 **Lazy loading** - Comments load only when needed
+- 🔒 **Privacy-friendly** - Waline allows anonymous comments without tracking
+
+### Disabling Comments
+
+To disable comments on specific posts:
+
+```yaml
+---
+title: My Post
+comments: false
+---
+```
+
+To disable comments globally, set `provider: false` in the configuration.
 
 ## 👨‍💻 Contributors
 

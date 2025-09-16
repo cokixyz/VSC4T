@@ -32,12 +32,25 @@
   --vscode-code-bg: #2d2d30;
   --vscode-code-border: #404040;
   --vscode-code-text: #ce9178;
+  --vscode-code-line-number: #858585;
+  --vscode-code-line-number-bg: #252526;
+  --vscode-code-container-bg: #2b2b2b;
+  --vscode-code-shadow: rgba(0, 0, 0, 0.15);
+  --vscode-code-copy-btn: #2d2d2d;
+  --vscode-code-copy-btn-border: #3c3c3c;
+  --vscode-code-copy-btn-text: #9d9d9d;
+  --vscode-code-copy-btn-hover: #3c3c3c;
+  --vscode-code-copy-btn-hover-text: #d4d4d4;
   
   /* 特殊元素 */
   --vscode-header-bg: #1e1e1e;
   --vscode-header-border: #2d2d2d;
   --vscode-footer-bg: #1e1e1e;
   --vscode-scrollbar: #474747;
+  
+  /* 深色主题专用阴影 */
+  --vscode-header-shadow: rgba(0, 0, 0, 0.24);
+  --vscode-sidebar-shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* White theme (VS Code Light+) */
@@ -58,7 +71,7 @@
   --vscode-accent-light: #007acc;
   --vscode-selection: rgba(0, 120, 212, 0.2);
   --vscode-line-highlight: rgba(0, 0, 0, 0.04);
-  --vscode-shadow: rgba(0, 0, 0, 0.1);
+  --vscode-shadow: rgba(0, 0, 0, 0.05); /* 减少阴影强度 */
   
   /* 语义化颜色 */
   --vscode-link: #0066b8;
@@ -72,12 +85,25 @@
   --vscode-code-bg: #f8f8f8;
   --vscode-code-border: #e0e0e0;
   --vscode-code-text: #a31515;
+  --vscode-code-line-number: #6e6e6e;
+  --vscode-code-line-number-bg: #f0f0f0;
+  --vscode-code-container-bg: #fafafa;
+  --vscode-code-shadow: rgba(0, 0, 0, 0.05);
+  --vscode-code-copy-btn: #f0f0f0;
+  --vscode-code-copy-btn-border: #e0e0e0;
+  --vscode-code-copy-btn-text: #6e6e6e;
+  --vscode-code-copy-btn-hover: #e8e8e8;
+  --vscode-code-copy-btn-hover-text: #1e1e1e;
   
   /* 特殊元素 */
   --vscode-header-bg: #ffffff;
   --vscode-header-border: #e0e0e0;
   --vscode-footer-bg: #f3f3f3;
   --vscode-scrollbar: #c1c1c1;
+  
+  /* 白色主题专用阴影 */
+  --vscode-header-shadow: rgba(0, 0, 0, 0.03); /* 极淡的 header 阴影 */
+  --vscode-sidebar-shadow: transparent; /* 移除侧边栏阴影 */
 }
 
 /* 默认使用暗色主题 */
@@ -112,6 +138,15 @@
   --vscode-code-bg: #2d2d30;
   --vscode-code-border: #404040;
   --vscode-code-text: #ce9178;
+  --vscode-code-line-number: #858585;
+  --vscode-code-line-number-bg: #252526;
+  --vscode-code-container-bg: #2b2b2b;
+  --vscode-code-shadow: rgba(0, 0, 0, 0.15);
+  --vscode-code-copy-btn: #2d2d2d;
+  --vscode-code-copy-btn-border: #3c3c3c;
+  --vscode-code-copy-btn-text: #9d9d9d;
+  --vscode-code-copy-btn-hover: #3c3c3c;
+  --vscode-code-copy-btn-hover-text: #d4d4d4;
   
   /* 特殊元素 */
   --vscode-header-bg: #1e1e1e;

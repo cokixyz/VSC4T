@@ -61,6 +61,7 @@
 - [🎨 自定义样式](#自定义样式)
 - [📱 移动端优化](#-移动端优化)
 - [🔍 搜索配置](#搜索配置)
+- [💬 评论系统配置](#-评论系统配置)
 - [📄 许可证](#-许可证)
 - [💬 支持](#-支持)
 
@@ -79,6 +80,7 @@
 - 🧜🏻‍♀️ **Mermaid图表支持** - 集成支持Mermaid图表
 - 📌 **文章置顶** - 将重要文章固定在博客顶部
 - 🎨 **自定义网站图标支持** - 多格式网站图标配置
+- 💬 **多评论系统支持** - 支持 Waline 和 Disqus，自动主题切换
 
 ## 📊 星标历史
 
@@ -397,6 +399,76 @@ search:
 - 分类
 
 用户可以切换这些过滤器来缩小搜索结果范围。
+
+## 💬 评论系统配置
+
+主题现在支持多种评论系统，并在深色和浅色模式之间自动切换主题。
+
+### 支持的评论系统
+
+- **Waline**（推荐）- 隐私友好，无需登录
+- **Disqus** - 传统评论系统
+
+### 配置 Waline（推荐）
+
+Waline 是一个隐私友好的评论系统，允许匿名评论，无需登录。非常适合想要直接评论而不需要创建账号的读者。
+
+1. 部署 Waline 服务器（免费选项）：
+   - **Vercel**（推荐）：[部署到 Vercel](https://vercel.com/new/clone?repository-url=https://github.com/walinejs/waline/tree/main/example)
+   - **Railway**：[部署到 Railway](https://railway.app/template/1LZnmQ)
+   - 其他选项：[Waline 快速上手](https://waline.js.org/guide/get-started/)
+
+2. 更新主题的 `_config.yml`：
+
+```yaml
+# 评论系统配置
+comments:
+  provider: waline  # 选项：'waline' | 'disqus' | false
+  
+  # Waline 配置
+  waline:
+    serverURL: https://your-domain.vercel.app  # 您的 Waline 服务器地址
+    lang: zh-CN  # 或 en 英文
+    locale: {}  # 自定义语言配置
+    emoji:
+      - https://unpkg.com/@waline/emojis@1.2.0/weibo
+    requiredMeta: []  # 匿名评论不需要填写任何信息
+    login: disable  # 禁用登录以允许匿名评论
+    wordLimit: 0  # 评论字数限制，0 为不限制
+    pageSize: 10  # 每页评论数
+    imageUploader: false  # 禁用图片上传
+```
+
+### 配置 Disqus
+
+```yaml
+comments:
+  provider: disqus
+  
+  disqus:
+    shortname: your-disqus-shortname
+```
+
+### 功能特点
+
+- 🎨 **自动主题切换** - 评论适应 VS Code 深色/浅色主题
+- 📱 **响应式设计** - 在所有设备上完美工作
+- 🌍 **多语言支持** - 遵循您网站的语言设置
+- 🚀 **懒加载** - 仅在需要时加载评论
+- 🔒 **隐私友好** - Waline 允许匿名评论，不跟踪用户
+
+### 禁用评论
+
+在特定文章上禁用评论：
+
+```yaml
+---
+title: 我的文章
+comments: false
+---
+```
+
+要全局禁用评论，请在配置中设置 `provider: false`。
 
 ## 👨‍💻 贡献者
 
