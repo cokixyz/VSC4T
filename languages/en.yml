@@ -28,6 +28,10 @@ search_error: Error loading search data
 
 # Recommended posts
 recommended_posts: RELATED POSTS
+
+# Comments
+comments: COMMENTS
+comment_placeholder: Feel free to leave a comment, no login required!
 similarity: Similarity
 view_more_posts: View More Posts
 min_read: min read

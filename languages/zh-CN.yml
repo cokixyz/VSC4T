@@ -30,3 +30,7 @@ recommended_posts: 相关文章
 similarity: 相似度
 view_more_posts: 查看更多文章
 min_read: 分钟阅读
+
+# 评论
+comments: 评论
+comment_placeholder: 欢迎留言，无需登录即可评论~

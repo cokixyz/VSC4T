@@ -110,7 +110,7 @@
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(45, 45, 45, 0.5) 50%,
+    var(--vscode-active) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -119,8 +119,8 @@
   border-radius: 3px 3px 0 0;
   background: linear-gradient(
     to bottom,
-    rgba(45, 45, 45, 0.3),
-    rgba(30, 30, 30, 0.5)
+    var(--vscode-active),
+    var(--vscode-bg-light)
   );
   border-bottom: none;
 }
@@ -156,11 +156,11 @@
 .nav-item:hover {
   background-position: 0 0;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(86, 156, 214, 0.1);
+  box-shadow: 0 2px 8px var(--vscode-shadow);
   background: linear-gradient(
     to bottom,
-    rgba(45, 45, 45, 0.5),
-    rgba(35, 35, 35, 0.7)
+    var(--vscode-active),
+    var(--vscode-bg-light)
   );
   border-color: var(--vscode-border-light);
 }
@@ -175,10 +175,10 @@
 }
 
 .nav-item.active {
-  background-color: rgba(45, 45, 45, 0.8);
+  background-color: var(--vscode-active);
   box-shadow: 
-    inset 0 0 0 1px rgba(86, 156, 214, 0.2),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+    inset 0 0 0 1px var(--vscode-selection),
+    0 2px 4px var(--vscode-shadow);
   background: var(--vscode-bg);
   border-color: var(--vscode-border-light);
   border-bottom-color: var(--vscode-bg);
@@ -303,8 +303,13 @@
 
 /* 添加滚动阴影效果 */
 .vs-header.scrolled {
-  background-color: rgba(30, 30, 30, 0.95);
+  background-color: var(--vscode-bg);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.1),
-    0 0 1px rgba(86, 156, 214, 0.1);
+    0 1px 3px var(--vscode-header-shadow, var(--vscode-shadow)),
+    0 0 0 1px var(--vscode-border-light);
+}
+
+/* 白色主题特定的 header 阴影优化 */
+:root[data-theme="white"] .vs-header.scrolled {
+  box-shadow: 0 1px 0 var(--vscode-border);
 }
